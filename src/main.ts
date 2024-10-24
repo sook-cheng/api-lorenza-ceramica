@@ -1,7 +1,15 @@
 import fastify from 'fastify';
+import cors from '@fastify/cors';
 import { routes } from './routes';
 
 const server = fastify();
+
+server.register(cors, {
+    origin: (request, callback) => {
+        // TODO: Restrict allowed origin later
+        return callback(null, true);
+    }
+});
 
 server.register(routes);
 
