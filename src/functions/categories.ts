@@ -1,8 +1,8 @@
 import { FastifyInstance } from "fastify";
 
-export const getAllProducts = async (fastify: FastifyInstance) => {
+export const getAllCategories = async (fastify: FastifyInstance) => {
     const connection = await fastify['mysql'].getConnection();
-    const [rows, fields] = await connection.query('SELECT * FROM products;');
+    const [rows, fields] = await connection.query('SELECT * FROM categories');
     connection.release();
     return rows;
 }

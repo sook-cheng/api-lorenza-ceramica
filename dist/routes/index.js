@@ -7,5 +7,15 @@ async function routes(fastify) {
     fastify.get("/faq", async (request, reply) => {
         return (0, functions_1.getFaqList)();
     });
+    fastify.get("/categories", async (request, reply) => {
+        return (0, functions_1.getAllCategories)(fastify);
+    });
+    fastify.get("/products", async (request, reply) => {
+        return (0, functions_1.getAllProducts)(fastify);
+    });
+    fastify.get("/product-details/:code", async (request, reply) => {
+        const { code } = request.params;
+        return (0, functions_1.getProductDetailsByCode)(code);
+    });
 }
 //# sourceMappingURL=index.js.map

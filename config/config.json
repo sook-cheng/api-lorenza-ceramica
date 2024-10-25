@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "lorenzac_seadmin",
+    "password": "Freology0315",
+    "database": "lorenzac_web2024",
+    "host": "110.4.45.213",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "lorenzac_seadmin",
+    "password": "Freology0315",
+    "database": "lorenzac_web2024",
+    "host": "110.4.45.213",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "lorenzac_seadmin",
+    "password": "Freology0315",
+    "database": "lorenzac_web2024",
+    "host": "110.4.45.213",
+    "dialect": "mysql"
+  }
+}
