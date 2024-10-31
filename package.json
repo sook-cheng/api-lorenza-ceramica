@@ -2,14 +2,14 @@
   "name": "api-lorenza-ceramica",
   "version": "1.0.0",
   "description": "This project was bootstrapped with Fastify-CLI.",
-  "main": "main.js",
+  "main": "app.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
     "test": "node --test test/**/*.test.js",
     "build": "tsc -p tsconfig.json",
-    "start": "node main.js",
+    "start": "node app.js",
     "start:dev": "nodemon"
   },
   "keywords": [],

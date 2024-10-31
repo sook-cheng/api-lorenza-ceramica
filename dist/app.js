@@ -53,4 +53,4 @@ server.listen({ port: 8080 }, (err, address) => {
     }
     console.log(`Server listening at ${address}`);
 });
-//# sourceMappingURL=main.js.map
+//# sourceMappingURL=app.js.map
