@@ -1,6 +1,6 @@
 import fastify from 'fastify';
 import cors from '@fastify/cors';
-import { routes } from './routes';
+import { dataCreationRoutes, routes } from './routes';
 import fastifyPlugin from 'fastify-plugin';
 import { Sequelize } from "sequelize";
 import dotenv from 'dotenv';
@@ -39,7 +39,9 @@ const server = fastify();
 
 server.register(fastifyMysql, {
     promise: true,
-    connectionString: `mysql://${process.env.DATABASE_USER_NAME}:${process.env.DATABASE_USER_PASSWORD}@${process.env.DATABASE_HOST}:3306/${process.env.DATABASE_NAME}`
+    connectionString: process.env.NODE_ENV === "development"
+        ? `mysql://${process.env.DATABASE_USER_NAME}@${process.env.DATABASE_HOST}:3306/${process.env.DATABASE_NAME}`
+        : `mysql://${process.env.DATABASE_USER_NAME}:${process.env.DATABASE_USER_PASSWORD}@${process.env.DATABASE_HOST}:3306/${process.env.DATABASE_NAME}`
 })
 
 server.register(cors, {
@@ -50,8 +52,9 @@ server.register(cors, {
 });
 
 server.register(routes);
+server.register(dataCreationRoutes);
 
-server.listen({ port: 8080 }, (err, address) => {
+server.listen({ port: 8888 }, (err, address) => {
     if (err) {
         console.error(err);
         process.exit(1);
