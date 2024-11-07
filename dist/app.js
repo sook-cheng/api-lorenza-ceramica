@@ -37,7 +37,9 @@ const server = (0, fastify_1.default)();
 // });
 server.register(mysql_1.default, {
     promise: true,
-    connectionString: `mysql://${process.env.DATABASE_USER_NAME}:${process.env.DATABASE_USER_PASSWORD}@${process.env.DATABASE_HOST}:3306/${process.env.DATABASE_NAME}`
+    connectionString: process.env.NODE_ENV === "development"
+        ? `mysql://${process.env.DATABASE_USER_NAME}@${process.env.DATABASE_HOST}:3306/${process.env.DATABASE_NAME}`
+        : `mysql://${process.env.DATABASE_USER_NAME}:${process.env.DATABASE_USER_PASSWORD}@${process.env.DATABASE_HOST}:3306/${process.env.DATABASE_NAME}`
 });
 server.register(cors_1.default, {
     origin: (request, callback) => {
@@ -46,7 +48,8 @@ server.register(cors_1.default, {
     }
 });
 server.register(routes_1.routes);
-server.listen({ port: 8080 }, (err, address) => {
+server.register(routes_1.dataCreationRoutes);
+server.listen({ port: 8888 }, (err, address) => {
     if (err) {
         console.error(err);
         process.exit(1);
