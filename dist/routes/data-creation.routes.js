@@ -140,5 +140,13 @@ async function dataCreationRoutes(fastify) {
         }
         return sql;
     });
+    fastify.get("/create-productsImages", async (request, reply) => {
+        let sql;
+        for (const p of data_1.images2) {
+            sql += "\nINSERT INTO productsImages (productId,productName,productCode,sequence,type) ";
+            sql += `SELECT id AS productId, name AS productName, '${p.productCode}' AS productCode, ${p.sequence} AS sequence, '${p.type}' AS type FROM products WHERE name = '${p.productName}' AND ((code IS NOT NULL AND code = '${p.productCode}') OR (code IS NULL AND color = '${p.productCode}'));`;
+        }
+        return sql;
+    });
 }
 //# sourceMappingURL=data-creation.routes.js.map

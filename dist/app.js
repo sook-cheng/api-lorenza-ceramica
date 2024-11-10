@@ -49,7 +49,7 @@ server.register(cors_1.default, {
 });
 server.register(routes_1.routes);
 server.register(routes_1.dataCreationRoutes);
-server.listen({ port: 8888 }, (err, address) => {
+server.listen({ host: '127.0.0.1', port: 8888 }, (err, address) => {
     if (err) {
         console.error(err);
         process.exit(1);

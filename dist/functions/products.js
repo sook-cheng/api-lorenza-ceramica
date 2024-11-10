@@ -1,11 +1,14 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getProductsBySideNav = exports.getAllProducts = void 0;
+exports.formatImageUrl = exports.getProductsBySideNav = exports.getAllProducts = void 0;
 const getAllProducts = async (fastify) => {
     const connection = await fastify['mysql'].getConnection();
-    const [rows, fields] = await connection.query('SELECT * FROM products ORDER BY id, name ASC;');
+    const [rows, fields] = await connection.query('SELECT * FROM products ORDER BY id;');
+    const [images, iFields] = await connection.query('SELECT * FROM productsImages ORDER BY productId;');
     connection.release();
     return rows.map((x) => {
+        const imgs = images.filter((y) => y.productId === x.id);
+        const imgList = imgs.length > 0 ? imgs.map((z) => (0, exports.formatImageUrl)(z.productName, z.productCode, z.sequence, z.type)) : [];
         return {
             id: x.id,
             prdName: x.name,
@@ -15,7 +18,8 @@ const getAllProducts = async (fastify) => {
             prdVariation: x.variation ?? '-',
             prdColor: x.color ?? '-',
             prdFinish: x.finish ?? '-',
-            thickness: x.thickness ?? '-'
+            thickness: x.thickness ?? '-',
+            images: imgList,
         };
     });
 };
@@ -52,8 +56,17 @@ const getProductsBySideNav = async (fastify, param) => {
             break;
     }
     const [rows, fields] = await connection.query(query);
+    const productIds = rows.map((x) => x.id);
+    let args = '';
+    for (const id of productIds) {
+        args = args.concat(`${id},`);
+    }
+    args = args.substring(0, args.length - 1);
+    const [images, iFields] = await connection.query(`SELECT * FROM productsImages WHERE productId IN (${args}) ORDER BY productId;`);
     connection.release();
     return rows.map((x) => {
+        const imgs = images.filter((y) => y.productId === x.id);
+        const imgList = imgs.length > 0 ? imgs.map((z) => (0, exports.formatImageUrl)(z.productName, z.productCode, z.sequence, z.type)) : [];
         return {
             id: x.id,
             prdName: x.name,
@@ -63,10 +76,15 @@ const getProductsBySideNav = async (fastify, param) => {
             prdVariation: x.variation ?? '-',
             prdColor: x.color ?? '-',
             prdFinish: x.finish ?? '-',
-            thickness: x.thickness ?? '-'
+            thickness: x.thickness ?? '-',
+            images: imgList,
         };
     });
     ;
 };
 exports.getProductsBySideNav = getProductsBySideNav;
+const formatImageUrl = (name, code, sequence, type) => {
+    return `https://lorenzaceramica.com/images/products/${name}/${code}-${sequence}.${type}`;
+};
+exports.formatImageUrl = formatImageUrl;
 //# sourceMappingURL=products.js.map

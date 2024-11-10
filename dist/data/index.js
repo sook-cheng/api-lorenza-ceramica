@@ -24,4 +24,5 @@ __exportStar(require("./sizes.data"), exports);
 __exportStar(require("./tags.data"), exports);
 __exportStar(require("./productsTags.data"), exports);
 __exportStar(require("./tileTypes.data"), exports);
+__exportStar(require("./images.data"), exports);
 //# sourceMappingURL=index.js.map
