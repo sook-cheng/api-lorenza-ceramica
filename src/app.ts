@@ -54,7 +54,7 @@ server.register(cors, {
 server.register(routes);
 server.register(dataCreationRoutes);
 
-server.listen({ port: 8888 }, (err, address) => {
+server.listen({ host: '127.0.0.1', port: 8888 }, (err, address) => {
     if (err) {
         console.error(err);
         process.exit(1);

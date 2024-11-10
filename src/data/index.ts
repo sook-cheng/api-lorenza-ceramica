@@ -8,3 +8,4 @@ export * from './sizes.data';
 export * from './tags.data';
 export * from './productsTags.data';
 export * from './tileTypes.data';
+export * from './images.data';

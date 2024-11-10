@@ -2,9 +2,12 @@ import { FastifyInstance } from "fastify";
 
 export const getAllProducts = async (fastify: FastifyInstance) => {
     const connection = await fastify['mysql'].getConnection();
-    const [rows, fields] = await connection.query('SELECT * FROM products ORDER BY id, name ASC;');
+    const [rows, fields] = await connection.query('SELECT * FROM products ORDER BY id;');
+    const [images, iFields] = await connection.query('SELECT * FROM productsImages ORDER BY productId;');
     connection.release();
     return rows.map((x: any) => {
+        const imgs = images.filter((y: any) => y.productId === x.id);
+        const imgList = imgs.length > 0 ? imgs.map((z: any) => formatImageUrl(z.productName, z.productCode, z.sequence, z.type)) : [];
         return {
             id: x.id,
             prdName: x.name,
@@ -14,7 +17,8 @@ export const getAllProducts = async (fastify: FastifyInstance) => {
             prdVariation: x.variation ?? '-',
             prdColor: x.color ?? '-',
             prdFinish: x.finish ?? '-',
-            thickness: x.thickness ?? '-'
+            thickness: x.thickness ?? '-',
+            images: imgList,
         }
     });
 }
@@ -50,8 +54,17 @@ export const getProductsBySideNav = async (fastify: FastifyInstance, param: stri
             break;
     }
     const [rows, fields] = await connection.query(query);
+    const productIds: number[] = rows.map((x: any) => x.id);
+    let args = '';
+    for (const id of productIds) {
+        args = args.concat(`${id},`);
+    }
+    args = args.substring(0, args.length - 1);
+    const [images, iFields] = await connection.query(`SELECT * FROM productsImages WHERE productId IN (${args}) ORDER BY productId;`);
     connection.release();
     return rows.map((x: any) => {
+        const imgs = images.filter((y: any) => y.productId === x.id);
+        const imgList = imgs.length > 0 ? imgs.map((z: any) => formatImageUrl(z.productName, z.productCode, z.sequence, z.type)) : [];
         return {
             id: x.id,
             prdName: x.name,
@@ -61,7 +74,12 @@ export const getProductsBySideNav = async (fastify: FastifyInstance, param: stri
             prdVariation: x.variation ?? '-',
             prdColor: x.color ?? '-',
             prdFinish: x.finish ?? '-',
-            thickness: x.thickness ?? '-'
+            thickness: x.thickness ?? '-',
+            images: imgList,
         }
     });;
+}
+
+export const formatImageUrl = (name: string, code: string, sequence: number, type: string) => {
+    return `https://lorenzaceramica.com/images/products/${name}/${code}-${sequence}.${type}`;
 }

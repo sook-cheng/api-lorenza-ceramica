@@ -13,7 +13,9 @@ import {
   productsTagsWithoutCode,
   addProducts1,
   addProductsTags1,
-  productsTagsSales
+  productsTagsSales,
+  images,
+  images2
 } from "../data";
 
 export async function dataCreationRoutes(fastify: FastifyInstance) {
@@ -167,6 +169,15 @@ export async function dataCreationRoutes(fastify: FastifyInstance) {
         sql += "\nINSERT INTO productsTags (productId,tagId) ";
         sql += `SELECT p.id, t.id FROM products p, tags t WHERE p.size = '${p.size}' AND t.name = '${t}';`;
       }
+    }
+    return sql;
+  });
+
+  fastify.get("/create-productsImages", async (request, reply) => {
+    let sql;
+    for (const p of images2) {
+      sql += "\nINSERT INTO productsImages (productId,productName,productCode,sequence,type) "
+      sql += `SELECT id AS productId, name AS productName, '${p.productCode}' AS productCode, ${p.sequence} AS sequence, '${p.type}' AS type FROM products WHERE name = '${p.productName}' AND ((code IS NOT NULL AND code = '${p.productCode}') OR (code IS NULL AND color = '${p.productCode}'));`
     }
     return sql;
   });
