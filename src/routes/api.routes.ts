@@ -1,5 +1,5 @@
 import { FastifyInstance } from "fastify";
-import { getAllCategories, getAllProducts, getAllProductsSideNavs, getFaqList, getProductDetailsByCode, getProductsBySideNav } from "../functions";
+import { getAllCategories, getAllProducts, getAllProductsSideNavs, getFaqList, getProductDetailsByCode, getProductsBySideNav, getProductsByTagName } from "../functions";
 
 export async function routes(fastify: FastifyInstance) {
   // Add new routes here
@@ -22,6 +22,11 @@ export async function routes(fastify: FastifyInstance) {
   fastify.get("/products/:value", async (request, reply) => {
     const { value }: any = request.params;
     return getProductsBySideNav(fastify, value);
+  });
+
+  fastify.get("/productsByTagName/:value", async (request, reply) => {
+    const { value }: any = request.params;
+    return getProductsByTagName(fastify, value);
   });
 
   fastify.get("/product-details/:name/:code", async (request, reply) => {

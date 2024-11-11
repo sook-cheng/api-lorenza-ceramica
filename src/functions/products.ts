@@ -80,6 +80,36 @@ export const getProductsBySideNav = async (fastify: FastifyInstance, param: stri
     });;
 }
 
+export const getProductsByTagName = async (fastify: FastifyInstance, param: string) => {
+    const connection = await fastify['mysql'].getConnection();
+    const query = `SELECT p.* FROM products p LEFT JOIN productsTags pt ON p.id = pt.productId LEFT JOIN tags t1 ON t1.id = pt.tagId WHERE t1.value = \'${param}\' ORDER BY p.id, p.name ASC;`;
+    const [rows, fields] = await connection.query(query);
+    const productIds: number[] = rows.map((x: any) => x.id);
+    let args = '';
+    for (const id of productIds) {
+        args = args.concat(`${id},`);
+    }
+    args = args.substring(0, args.length - 1);
+    const [images, iFields] = await connection.query(`SELECT * FROM productsImages WHERE productId IN (${args}) ORDER BY productId;`);
+    connection.release();
+    return rows.map((x: any) => {
+        const imgs = images.filter((y: any) => y.productId === x.id);
+        const imgList = imgs.length > 0 ? imgs.map((z: any) => formatImageUrl(z.productName, z.productCode, z.sequence, z.type)) : [];
+        return {
+            id: x.id,
+            prdName: x.name,
+            prdCode: x.code ?? '-',
+            prdDesc: x.description,
+            prdSize: x.size ?? '-',
+            prdVariation: x.variation ?? '-',
+            prdColor: x.color ?? '-',
+            prdFinish: x.finish ?? '-',
+            thickness: x.thickness ?? '-',
+            images: imgList,
+        }
+    });;
+}
+
 export const formatImageUrl = (name: string, code: string, sequence: number, type: string) => {
     return `https://lorenzaceramica.com/images/products/${name}/${code}-${sequence}.${type}`;
 }
