@@ -53,6 +53,12 @@ export const getProductsBySideNav = async (fastify: FastifyInstance, param: stri
             query = `SELECT p.* FROM products p LEFT JOIN productsCategories pc ON p.id = pc.productId LEFT JOIN categories c1 ON c1.id = pc.categoryId WHERE c1.name = \'${sideNavName}\' ORDER BY p.id, p.name ASC;`;
             break;
     }
+
+    // All products of Tiles
+    if (param === 'all-products') {
+        query = `SELECT p.* FROM products p LEFT JOIN productsCategories pc ON p.id = pc.productId LEFT JOIN categories c1 ON c1.id = pc.categoryId LEFT JOIN categories c2 ON c2.id = c1.mainCategoryId WHERE c2.name = \'Tiles\' ORDER BY p.id, p.name ASC;`;
+    }
+
     const [rows, fields] = await connection.query(query);
     connection.release();
 
