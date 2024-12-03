@@ -42,32 +42,32 @@ const getProductsBySideNav = async (fastify, param) => {
         let query;
         switch (dbTable) {
             case 'tileTypes':
-                query = `SELECT p.* FROM products p LEFT JOIN productsTileTypes pt ON p.id = pt.productId LEFT JOIN tileTypes t ON t.id = pt.tileTypeId WHERE t.value = \'${sideNavName}\' ORDER BY p.id, p.name ASC;`;
+                query = `SELECT DISTINCT p.* FROM products p LEFT JOIN productsTileTypes pt ON p.id = pt.productId LEFT JOIN tileTypes t ON t.id = pt.tileTypeId WHERE t.value = \'${sideNavName}\' ORDER BY p.id, p.name ASC;`;
                 break;
             case 'tags':
                 if (param === 'sales') {
-                    query = `SELECT p.* FROM products p LEFT JOIN productsTags pt ON p.id = pt.productId LEFT JOIN tags t1 ON t1.id = pt.tagId LEFT JOIN tags t2 ON t1.mainTagId = t2.id WHERE t2.value = \'${sideNavName}\' ORDER BY p.id, p.name ASC;`;
+                    query = `SELECT DISTINCT p.* FROM products p LEFT JOIN productsTags pt ON p.id = pt.productId LEFT JOIN tags t1 ON t1.id = pt.tagId LEFT JOIN tags t2 ON t1.mainTagId = t2.id WHERE t2.value = \'${sideNavName}\' ORDER BY p.id, p.name ASC;`;
                 }
                 else
-                    query = `SELECT p.* FROM products p LEFT JOIN productsTags pt ON p.id = pt.productId LEFT JOIN tags t1 ON t1.id = pt.tagId WHERE t1.value = \'${sideNavName}\' ORDER BY p.id, p.name ASC;`;
+                    query = `SELECT DISTINCT p.* FROM products p LEFT JOIN productsTags pt ON p.id = pt.productId LEFT JOIN tags t1 ON t1.id = pt.tagId WHERE t1.value = \'${sideNavName}\' ORDER BY p.id, p.name ASC;`;
                 break;
             case 'sizes':
-                query = `SELECT p.* FROM products p LEFT JOIN productsSizes ps ON p.id = ps.productId LEFT JOIN sizes s ON s.id = ps.sizeId WHERE s.value = \'${sideNavName}\' ORDER BY p.id, p.name ASC;`;
+                query = `SELECT DISTINCT p.* FROM products p LEFT JOIN productsSizes ps ON p.id = ps.productId LEFT JOIN sizes s ON s.id = ps.sizeId WHERE s.value = \'${sideNavName}\' ORDER BY p.id, p.name ASC;`;
                 break;
             case 'finishes':
-                query = `SELECT p.* FROM products p LEFT JOIN productsFinishes pf ON p.id = pf.productId LEFT JOIN finishes f ON f.id = pf.finishId WHERE f.value = \'${sideNavName}\' ORDER BY p.id, p.name ASC;`;
+                query = `SELECT DISTINCT p.* FROM products p LEFT JOIN productsFinishes pf ON p.id = pf.productId LEFT JOIN finishes f ON f.id = pf.finishId WHERE f.value = \'${sideNavName}\' ORDER BY p.id, p.name ASC;`;
                 break;
             case 'colors':
-                query = `SELECT p.* FROM products p LEFT JOIN productsColors pc ON p.id = pc.productId LEFT JOIN colors c ON c.id = pc.colorId WHERE c.value = \'${sideNavName}\' ORDER BY p.id, p.name ASC;`;
+                query = `SELECT DISTINCT p.* FROM products p LEFT JOIN productsColors pc ON p.id = pc.productId LEFT JOIN colors c ON c.id = pc.colorId WHERE c.value = \'${sideNavName}\' ORDER BY p.id, p.name ASC;`;
                 break;
             case 'categories':
             default:
-                query = `SELECT p.* FROM products p LEFT JOIN productsCategories pc ON p.id = pc.productId LEFT JOIN categories c1 ON c1.id = pc.categoryId WHERE c1.name = \'${sideNavName}\' ORDER BY p.id, p.name ASC;`;
+                query = `SELECT DISTINCT p.* FROM products p LEFT JOIN productsCategories pc ON p.id = pc.productId LEFT JOIN categories c1 ON c1.id = pc.categoryId WHERE c1.name = \'${sideNavName}\' ORDER BY p.id, p.name ASC;`;
                 break;
         }
         // All products of Tiles
         if (param === 'all-products') {
-            query = `SELECT p.* FROM products p LEFT JOIN productsCategories pc ON p.id = pc.productId LEFT JOIN categories c1 ON c1.id = pc.categoryId LEFT JOIN categories c2 ON c2.id = c1.mainCategoryId WHERE c2.name = \'Tiles\' ORDER BY p.id, p.name ASC;`;
+            query = `SELECT DISTINCT p.* FROM products p LEFT JOIN productsCategories pc ON p.id = pc.productId LEFT JOIN categories c1 ON c1.id = pc.categoryId LEFT JOIN categories c2 ON c2.id = c1.mainCategoryId WHERE c2.name = \'Tiles\' ORDER BY p.id, p.name ASC;`;
         }
         const [rows, fields] = await connection.query(query);
         if (rows.length > 0) {
