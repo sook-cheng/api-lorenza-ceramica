@@ -19,4 +19,6 @@ __exportStar(require("./products"), exports);
 __exportStar(require("./product-details"), exports);
 __exportStar(require("./categories"), exports);
 __exportStar(require("./products-side-navs"), exports);
+__exportStar(require("./inspirations"), exports);
+__exportStar(require("./projects"), exports);
 //# sourceMappingURL=index.js.map

@@ -28,5 +28,14 @@ async function routes(fastify) {
         const { name, code } = request.params;
         return (0, functions_1.getProductDetailsByCode)(fastify, name, code);
     });
+    fastify.get("/inspirations", async (request, reply) => {
+        return (0, functions_1.getInspirationList)();
+    });
+    fastify.get("/projects-commercial", async (request, reply) => {
+        return (0, functions_1.getProjectCommercialList)();
+    });
+    fastify.get("/projects-residential", async (request, reply) => {
+        return (0, functions_1.getProjectResidentialList)();
+    });
 }
 //# sourceMappingURL=api.routes.js.map
