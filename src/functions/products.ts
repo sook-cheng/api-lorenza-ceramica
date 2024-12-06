@@ -6,12 +6,16 @@ export const getAllProducts = async (fastify: FastifyInstance) => {
 
     try {
         const [rows, fields] = await connection.query('SELECT * FROM products ORDER BY id;');
-        const [images, iFields] = await connection.query('SELECT * FROM productsImages ORDER BY productId;');
+        const [images, iFields] = await connection.query('SELECT * FROM productsImages WHERE isMocked = 0 ORDER BY productId;');
+        const [mockedImages, miFields] = await connection.query('SELECT * FROM productsImages WHERE isMocked = 1 ORDER BY productId;');
         
         if (rows.length > 0) {
             value = rows.map((x: any) => {
                 const imgs = images.filter((y: any) => y.productId === x.id);
                 const imgList = imgs.length > 0 ? imgs.map((z: any) => formatImageUrl(z.productName, z.productCode, z.sequence, z.type)) : [];
+                const mockedImgs = mockedImages.filter((y: any) => y.productId === x.id);
+                const mockedImgList = mockedImgs.length > 0 ? mockedImgs.map((z: any) => formatImageUrl(z.productName, z.productCode, z.sequence, z.type)) : [];
+                
                 return {
                     id: x.id,
                     prdName: x.name,
@@ -23,6 +27,7 @@ export const getAllProducts = async (fastify: FastifyInstance) => {
                     prdFinish: x.finish ?? '-',
                     thickness: x.thickness ?? '-',
                     images: imgList,
+                    mockedImages: mockedImgList,
                 }
             });
         }
@@ -82,10 +87,15 @@ export const getProductsBySideNav = async (fastify: FastifyInstance, param: stri
                 args = args.concat(`${id},`);
             }
             args = args.substring(0, args.length - 1);
-            const [images, iFields] = await connection.query(`SELECT * FROM productsImages WHERE productId IN (${args}) ORDER BY productId;`);
+            const [images, iFields] = await connection.query(`SELECT * FROM productsImages WHERE productId IN (${args}) AND isMocked = 0 ORDER BY productId;`);
+            const [mockedImages, miFields] = await connection.query(`SELECT * FROM productsImages WHERE productId IN (${args}) AND isMocked = 1 ORDER BY productId;`);
+
             value = rows.map((x: any) => {
                 const imgs = images.filter((y: any) => y.productId === x.id);
                 const imgList = imgs.length > 0 ? imgs.map((z: any) => formatImageUrl(z.productName, z.productCode, z.sequence, z.type)) : [];
+                const mockedImgs = mockedImages.filter((y: any) => y.productId === x.id);
+                const mockedImgList = mockedImgs.length > 0 ? mockedImgs.map((z: any) => formatImageUrl(z.productName, z.productCode, z.sequence, z.type)) : [];
+                
                 return {
                     id: x.id,
                     prdName: x.name,
@@ -97,6 +107,7 @@ export const getProductsBySideNav = async (fastify: FastifyInstance, param: stri
                     prdFinish: x.finish ?? '-',
                     thickness: x.thickness ?? '-',
                     images: imgList,
+                    mockedImages: mockedImgList,
                 }
             });
         }
@@ -122,10 +133,15 @@ export const getProductsByTagName = async (fastify: FastifyInstance, param: stri
                 args = args.concat(`${id},`);
             }
             args = args.substring(0, args.length - 1);
-            const [images, iFields] = await connection.query(`SELECT * FROM productsImages WHERE productId IN (${args}) ORDER BY productId;`);
+            const [images, iFields] = await connection.query(`SELECT * FROM productsImages WHERE productId IN (${args}) AND isMocked = 0 ORDER BY productId;`);
+            const [mockedImages, miFields] = await connection.query(`SELECT * FROM productsImages WHERE productId IN (${args}) AND isMocked = 1 ORDER BY productId;`);
+            
             value = rows.map((x: any) => {
                 const imgs = images.filter((y: any) => y.productId === x.id);
                 const imgList = imgs.length > 0 ? imgs.map((z: any) => formatImageUrl(z.productName, z.productCode, z.sequence, z.type)) : [];
+                const mockedImgs = mockedImages.filter((y: any) => y.productId === x.id);
+                const mockedImgList = mockedImgs.length > 0 ? mockedImgs.map((z: any) => formatImageUrl(z.productName, z.productCode, z.sequence, z.type)) : [];
+                
                 return {
                     id: x.id,
                     prdName: x.name,
@@ -137,6 +153,7 @@ export const getProductsByTagName = async (fastify: FastifyInstance, param: stri
                     prdFinish: x.finish ?? '-',
                     thickness: x.thickness ?? '-',
                     images: imgList,
+                    mockedImages: mockedImgList
                 }
             });
         }

@@ -7,8 +7,10 @@ export const getProductDetailsByCode = async (fastify: FastifyInstance, name: st
     
     try{
         const [rows, fields] = await connection.query(`SELECT * FROM products WHERE name = \'${name}\' AND (code = \'${code}\' OR color = \'${code}\');`);
-        const [images, iFields] = await connection.query(`SELECT * FROM productsImages WHERE productId = ${rows[0].id};`);
+        const [images, iFields] = await connection.query(`SELECT * FROM productsImages WHERE productId = ${rows[0].id} AND isMocked = 0;`);
+        const [mockedImages, miFields] = await connection.query(`SELECT * FROM productsImages WHERE productId = ${rows[0].id} AND isMocked = 1;`);
         const imgList = images.length > 0 ? images.map((z: any) => formatImageUrl(z.productName, z.productCode, z.sequence, z.type)) : [];
+        const mockedImgList = mockedImages.length > 0 ? mockedImages.map((z: any) => formatImageUrl(z.productName, z.productCode, z.sequence, z.type)) : [];
         
         value = {
             id: rows[0].id,
@@ -21,6 +23,7 @@ export const getProductDetailsByCode = async (fastify: FastifyInstance, name: st
             prdFinish: rows[0].finish ?? '-',
             thickness: rows[0].thickness ?? '-',
             images: imgList,
+            mockedImages: mockedImgList,
         };
     }
     finally{
