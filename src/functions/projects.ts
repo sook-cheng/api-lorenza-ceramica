@@ -1,4 +1,4 @@
-import { inspirationData } from "src/data/inspirations.data";
+import { inspirationData } from "../data/inspirations.data";
 
 export const getProjectCommercialList = () => {
     return inspirationData[1];
