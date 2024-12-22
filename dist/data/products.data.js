@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.addProducts1 = exports.products = void 0;
+exports.addProductsSanitaryKitchenWare = exports.addProducts1 = exports.products = void 0;
 exports.products = [
     {
         name: "Antico",
@@ -10,7 +10,7 @@ exports.products = [
         color: "Vintage Earth Blend",
         size: "300 x 300mm",
         finish: "Matt",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Antico",
@@ -20,7 +20,7 @@ exports.products = [
         color: "Sage Harmony",
         size: "300 x 300mm",
         finish: "Matt",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Motivo",
@@ -30,7 +30,7 @@ exports.products = [
         color: "Light Grey",
         size: "300 x 300mm",
         finish: "Matt",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Rombo",
@@ -40,7 +40,7 @@ exports.products = [
         color: "Mix Black",
         size: "300 x 300mm",
         finish: "Matt",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Bosque",
@@ -50,7 +50,7 @@ exports.products = [
         color: "Timber Brown",
         size: "300 x 600mm",
         finish: "Matt",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Bosque",
@@ -60,7 +60,7 @@ exports.products = [
         color: "Soft Oak Beige",
         size: "300 x 600mm",
         finish: "Matt",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Estetico",
@@ -70,7 +70,7 @@ exports.products = [
         color: "Monochromatic Black",
         size: "300 x 600mm",
         finish: "Gloss",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Morbido",
@@ -80,7 +80,7 @@ exports.products = [
         color: "Cedarwood Brown",
         size: "300 x 600mm",
         finish: "Matt",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Morbido",
@@ -90,7 +90,7 @@ exports.products = [
         color: "Driftwood Grey",
         size: "300 x 600mm",
         finish: "Matt",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Morbido",
@@ -100,7 +100,7 @@ exports.products = [
         color: "Maple Cream",
         size: "300 x 600mm",
         finish: "Matt",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Morbido",
@@ -110,7 +110,7 @@ exports.products = [
         color: "Honey Nude",
         size: "300 x 600mm",
         finish: "Matt",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Striscia",
@@ -120,7 +120,7 @@ exports.products = [
         color: "Brown",
         size: "300 x 600mm",
         finish: "Matt",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Striscia",
@@ -130,7 +130,7 @@ exports.products = [
         color: "Olive",
         size: "300 x 600mm",
         finish: "Matt",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Striscia",
@@ -140,7 +140,7 @@ exports.products = [
         color: "Grey",
         size: "300 x 600mm",
         finish: "Matt",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Striscia",
@@ -150,7 +150,7 @@ exports.products = [
         color: "Beige",
         size: "300 x 600mm",
         finish: "Matt",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Celula",
@@ -160,7 +160,7 @@ exports.products = [
         color: "Dark Brown",
         size: "300 x 600mm",
         finish: "Matt",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Celula",
@@ -170,7 +170,7 @@ exports.products = [
         color: "Light Grey",
         size: "300 x 600mm",
         finish: "Matt",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Marmette",
@@ -180,7 +180,7 @@ exports.products = [
         color: "Muted Greys",
         size: "300 x 600mm",
         finish: "Gloss",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Siltstone",
@@ -190,7 +190,7 @@ exports.products = [
         color: "Grey",
         size: "300 x 600mm",
         finish: "Matt",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Casa Tiles",
@@ -200,7 +200,7 @@ exports.products = [
         color: null,
         size: "98 x 98mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Casa Tiles",
@@ -210,7 +210,7 @@ exports.products = [
         color: null,
         size: "48 x 48mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Casa Tiles",
@@ -220,7 +220,7 @@ exports.products = [
         color: null,
         size: "98 x 98mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Casa Tiles",
@@ -230,7 +230,7 @@ exports.products = [
         color: null,
         size: "48 x 48mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Casa Tiles",
@@ -240,7 +240,7 @@ exports.products = [
         color: null,
         size: "98 x 98mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Casa Tiles",
@@ -250,7 +250,7 @@ exports.products = [
         color: null,
         size: "48 x 48mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Casa Tiles",
@@ -260,7 +260,7 @@ exports.products = [
         color: null,
         size: "98 x 98mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Casa Tiles",
@@ -270,7 +270,7 @@ exports.products = [
         color: null,
         size: "48 x 48mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Casa Tiles",
@@ -280,7 +280,7 @@ exports.products = [
         color: null,
         size: "98 x 98mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Casa Tiles",
@@ -290,7 +290,7 @@ exports.products = [
         color: null,
         size: "48 x 48mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Casa Tiles",
@@ -300,7 +300,7 @@ exports.products = [
         color: null,
         size: "98 x 98mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Turkish Tiles",
@@ -310,7 +310,7 @@ exports.products = [
         color: null,
         size: "200 x 200mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Turkish Tiles",
@@ -320,7 +320,7 @@ exports.products = [
         color: null,
         size: "200 x 200mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Turkish Tiles",
@@ -330,7 +330,7 @@ exports.products = [
         color: null,
         size: "200 x 200mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Turkish Tiles",
@@ -340,7 +340,7 @@ exports.products = [
         color: null,
         size: "200 x 200mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Insert Tiles",
@@ -350,7 +350,7 @@ exports.products = [
         color: null,
         size: "100 x 100mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Insert Tiles",
@@ -360,7 +360,7 @@ exports.products = [
         color: null,
         size: "100 x 100mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Insert Tiles",
@@ -370,7 +370,7 @@ exports.products = [
         color: null,
         size: "100 x 100mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Carved Tiles",
@@ -380,7 +380,7 @@ exports.products = [
         color: "Brown",
         size: "300 x 600mm",
         finish: "Matt",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Carved Tiles",
@@ -390,7 +390,7 @@ exports.products = [
         color: "Grey",
         size: "300 x 600mm",
         finish: "Matt",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Carved Tiles",
@@ -400,7 +400,7 @@ exports.products = [
         color: "Terracotta",
         size: "300 x 600mm",
         finish: "Deco Matt",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Carved Tiles",
@@ -410,7 +410,7 @@ exports.products = [
         color: "Yellow Gold",
         size: "300 x 600mm",
         finish: "Deco Matt",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Carved Tiles",
@@ -420,7 +420,7 @@ exports.products = [
         color: "Rose Gold",
         size: "300 x 600mm",
         finish: "Deco Matt",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Natura Tiles",
@@ -430,7 +430,7 @@ exports.products = [
         color: "Beige",
         size: "300 x 600mm",
         finish: "Matt",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Natura Tiles",
@@ -440,7 +440,7 @@ exports.products = [
         color: "Grey",
         size: "300 x 600mm",
         finish: "Matt",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Natura Tiles",
@@ -450,7 +450,7 @@ exports.products = [
         color: "Off White",
         size: "300 x 600mm",
         finish: "Matt",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Natura Tiles",
@@ -460,7 +460,7 @@ exports.products = [
         color: "Black",
         size: "300 x 600mm",
         finish: "Matt",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Natura Tiles",
@@ -470,7 +470,7 @@ exports.products = [
         color: "Grey",
         size: "300 x 600mm",
         finish: "Matt",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Natura Tiles",
@@ -480,7 +480,7 @@ exports.products = [
         color: "Off White",
         size: "300 x 600mm",
         finish: "Matt",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Marble-like Tiles",
@@ -490,7 +490,7 @@ exports.products = [
         color: "Beige",
         size: "300 x 600mm",
         finish: "Matt",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Marble-like Tiles",
@@ -500,7 +500,7 @@ exports.products = [
         color: "Brown",
         size: "300 x 600mm",
         finish: "Matt",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Wood Tiles",
@@ -510,7 +510,7 @@ exports.products = [
         color: "Brown",
         size: "300 x 600mm",
         finish: "Matt",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Wood Tiles",
@@ -520,7 +520,7 @@ exports.products = [
         color: "Grey",
         size: "300 x 600mm",
         finish: "Matt",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Carrara Tiles",
@@ -530,7 +530,7 @@ exports.products = [
         color: "Carrara",
         size: "300 x 600mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Carrara Tiles",
@@ -540,7 +540,7 @@ exports.products = [
         color: "Carrara",
         size: "300 x 600mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Emperado Tiles",
@@ -550,7 +550,7 @@ exports.products = [
         color: "Beige",
         size: "300 x 600mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Emperado Tiles",
@@ -560,7 +560,7 @@ exports.products = [
         color: "Brown",
         size: "300 x 600mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Emperado Tiles",
@@ -570,7 +570,7 @@ exports.products = [
         color: "Dark Grey",
         size: "300 x 600mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Emperado Tiles",
@@ -580,7 +580,7 @@ exports.products = [
         color: "Light Grey",
         size: "300 x 600mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Emperado Tiles",
@@ -590,7 +590,7 @@ exports.products = [
         color: "Beige",
         size: "300 x 600mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Emperado Tiles",
@@ -600,7 +600,7 @@ exports.products = [
         color: "Dark Beige",
         size: "300 x 600mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Emperado Tiles",
@@ -610,7 +610,7 @@ exports.products = [
         color: "Grey",
         size: "300 x 600mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Emperado Tiles",
@@ -620,7 +620,7 @@ exports.products = [
         color: "Light Beige",
         size: "300 x 600mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Emperado Tiles",
@@ -630,7 +630,7 @@ exports.products = [
         color: "Medium Beige",
         size: "300 x 600mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Emperado Tiles",
@@ -640,7 +640,7 @@ exports.products = [
         color: "Light Grey",
         size: "300 x 600mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Emperado Tiles",
@@ -650,7 +650,7 @@ exports.products = [
         color: "Medium Grey",
         size: "300 x 600mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Emperado Tiles",
@@ -660,7 +660,7 @@ exports.products = [
         color: "Light Beige",
         size: "300 x 600mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Emperado Tiles",
@@ -670,7 +670,7 @@ exports.products = [
         color: "Medium Beige",
         size: "300 x 600mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Emperado Tiles",
@@ -680,7 +680,7 @@ exports.products = [
         color: "Light Grey",
         size: "300 x 600mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Emperado Tiles",
@@ -690,7 +690,7 @@ exports.products = [
         color: "Medium Grey",
         size: "300 x 600mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Strutturato Tiles",
@@ -700,7 +700,7 @@ exports.products = [
         color: "Black",
         size: "300 x 600mm",
         finish: "Structured",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Strutturato Tiles",
@@ -710,7 +710,7 @@ exports.products = [
         color: "Grey",
         size: "300 x 600mm",
         finish: "Structured",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Strutturato Tiles",
@@ -720,7 +720,7 @@ exports.products = [
         color: "Terracotta",
         size: "300 x 600mm",
         finish: "Structured",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Lucidato Tiles",
@@ -730,7 +730,7 @@ exports.products = [
         color: "Grey",
         size: "600 x 600mm",
         finish: "Polished",
-        thickness: "10mm"
+        thickness: "10mm",
     },
     {
         name: "Lucidato Tiles",
@@ -740,7 +740,7 @@ exports.products = [
         color: "Yellow",
         size: "600 x 600mm",
         finish: "Polished",
-        thickness: "10mm"
+        thickness: "10mm",
     },
     {
         name: "Lucidato Tiles",
@@ -750,7 +750,7 @@ exports.products = [
         color: "Grey",
         size: "600 x 600mm",
         finish: "Polished",
-        thickness: "10mm"
+        thickness: "10mm",
     },
     {
         name: "Lucidato Tiles",
@@ -760,7 +760,7 @@ exports.products = [
         color: "Yellow",
         size: "600 x 600mm",
         finish: "Polished",
-        thickness: "10mm"
+        thickness: "10mm",
     },
     {
         name: "Lucidato Tiles",
@@ -770,7 +770,7 @@ exports.products = [
         color: "Grey",
         size: "600 x 600mm",
         finish: "Polished",
-        thickness: "10mm"
+        thickness: "10mm",
     },
     {
         name: "Lucidato Tiles",
@@ -780,7 +780,7 @@ exports.products = [
         color: "Yellow",
         size: "600 x 600mm",
         finish: "Polished",
-        thickness: "10mm"
+        thickness: "10mm",
     },
     {
         name: "Lucidato Tiles",
@@ -790,7 +790,7 @@ exports.products = [
         color: "Beige",
         size: "600 x 600mm",
         finish: "Polished",
-        thickness: "10mm"
+        thickness: "10mm",
     },
     {
         name: "Lucidato Tiles",
@@ -800,7 +800,7 @@ exports.products = [
         color: "Grey",
         size: "600 x 600mm",
         finish: "Polished",
-        thickness: "10mm"
+        thickness: "10mm",
     },
     {
         name: "Lucidato Tiles",
@@ -810,7 +810,7 @@ exports.products = [
         color: "Grey",
         size: "600 x 600mm",
         finish: "Polished",
-        thickness: "10mm"
+        thickness: "10mm",
     },
     {
         name: "Lucidato Tiles",
@@ -820,7 +820,7 @@ exports.products = [
         color: "Yellow",
         size: "600 x 600mm",
         finish: "Polished",
-        thickness: "10mm"
+        thickness: "10mm",
     },
     {
         name: "Lucidato Tiles",
@@ -830,7 +830,7 @@ exports.products = [
         color: "White Marble",
         size: "600 x 600mm",
         finish: "Polished",
-        thickness: "10mm"
+        thickness: "10mm",
     },
     {
         name: "Lucidato Tiles",
@@ -840,7 +840,7 @@ exports.products = [
         color: "White Marble",
         size: "600 x 600mm",
         finish: "Polished",
-        thickness: "10mm"
+        thickness: "10mm",
     },
     {
         name: "Neo Wood Tiles",
@@ -850,7 +850,7 @@ exports.products = [
         color: "Beige",
         size: "600 x 600mm",
         finish: "Polished",
-        thickness: "10mm"
+        thickness: "10mm",
     },
     {
         name: "Neo Wood Tiles",
@@ -860,7 +860,7 @@ exports.products = [
         color: "Grey",
         size: "600 x 600mm",
         finish: "Polished",
-        thickness: "10mm"
+        thickness: "10mm",
     },
     {
         name: "Nero Stone Tiles",
@@ -870,7 +870,7 @@ exports.products = [
         color: "Marble Grey",
         size: "600 x 600mm",
         finish: "Polished",
-        thickness: "10mm"
+        thickness: "10mm",
     },
     {
         name: "Nero Stone Tiles",
@@ -880,7 +880,7 @@ exports.products = [
         color: "Marble Grey",
         size: "600 x 600mm",
         finish: "Polished",
-        thickness: "10mm"
+        thickness: "10mm",
     },
     {
         name: "Nero Stone Tiles",
@@ -890,7 +890,7 @@ exports.products = [
         color: "Fossil",
         size: "600 x 600mm",
         finish: "Glaze Porcelain",
-        thickness: "10mm"
+        thickness: "10mm",
     },
     {
         name: "Nero Stone Tiles",
@@ -900,7 +900,7 @@ exports.products = [
         color: "Dark Sand",
         size: "600 x 600mm",
         finish: "Glaze Porcelain",
-        thickness: "10mm"
+        thickness: "10mm",
     },
     {
         name: "Nero Stone Tiles",
@@ -910,7 +910,7 @@ exports.products = [
         color: "Brown Marble",
         size: "600 x 600mm",
         finish: "Glaze Porcelain",
-        thickness: "10mm"
+        thickness: "10mm",
     },
     {
         name: "Nero Stone Tiles",
@@ -920,7 +920,7 @@ exports.products = [
         color: "Dark Grey Marble",
         size: "200 x 200mm",
         finish: "Glaze Porcelain",
-        thickness: "10mm"
+        thickness: "10mm",
     },
     {
         name: "Nero Stone Tiles",
@@ -930,7 +930,7 @@ exports.products = [
         color: "Black Galaxy",
         size: "200 x 200mm",
         finish: "Glaze Porcelain",
-        thickness: "10mm"
+        thickness: "10mm",
     },
     {
         name: "Opaco Tiles",
@@ -940,7 +940,7 @@ exports.products = [
         color: "Carrara White",
         size: "200 x 200mm",
         finish: "Matt",
-        thickness: "10mm"
+        thickness: "10mm",
     },
     {
         name: "Opaco Tiles",
@@ -950,7 +950,7 @@ exports.products = [
         color: "Black",
         size: "200 x 200mm",
         finish: "Matt",
-        thickness: "10mm"
+        thickness: "10mm",
     },
     {
         name: "Opaco Tiles",
@@ -960,7 +960,7 @@ exports.products = [
         color: "Grey",
         size: "600 x 600mm",
         finish: "Matt",
-        thickness: "10mm"
+        thickness: "10mm",
     },
     {
         name: "Opaco Tiles",
@@ -970,7 +970,7 @@ exports.products = [
         color: "Brown",
         size: "600 x 600mm",
         finish: "Matt",
-        thickness: "10mm"
+        thickness: "10mm",
     },
     {
         name: "Opaco Tiles",
@@ -980,7 +980,7 @@ exports.products = [
         color: "Off White",
         size: "600 x 600mm",
         finish: "Matt",
-        thickness: "10mm"
+        thickness: "10mm",
     },
     {
         name: "Opaco Tiles",
@@ -990,7 +990,7 @@ exports.products = [
         color: "Beige",
         size: "600 x 600mm",
         finish: "Matt",
-        thickness: "10mm"
+        thickness: "10mm",
     },
     {
         name: "Opaco Tiles",
@@ -1000,7 +1000,7 @@ exports.products = [
         color: "Black",
         size: "600 x 600mm",
         finish: "Matt",
-        thickness: "10mm"
+        thickness: "10mm",
     },
     {
         name: "Opaco Tiles",
@@ -1010,7 +1010,7 @@ exports.products = [
         color: "Medium Grey",
         size: "600 x 600mm",
         finish: "Matt",
-        thickness: "10mm"
+        thickness: "10mm",
     },
     {
         name: "Opaco Tiles",
@@ -1020,7 +1020,7 @@ exports.products = [
         color: "Black",
         size: "600 x 600mm",
         finish: "Matt",
-        thickness: "10mm"
+        thickness: "10mm",
     },
     {
         name: "Opaco Tiles",
@@ -1030,7 +1030,7 @@ exports.products = [
         color: "Light Grey",
         size: "600 x 600mm",
         finish: "Matt",
-        thickness: "10mm"
+        thickness: "10mm",
     },
     {
         name: "Opaco Tiles",
@@ -1040,7 +1040,7 @@ exports.products = [
         color: "Medium Grey",
         size: "600 x 600mm",
         finish: "Matt",
-        thickness: "10mm"
+        thickness: "10mm",
     },
     {
         name: "Opaco Tiles",
@@ -1050,7 +1050,7 @@ exports.products = [
         color: "Beige",
         size: "600 x 600mm",
         finish: "Matt",
-        thickness: "10mm"
+        thickness: "10mm",
     },
     {
         name: "Opaco Tiles",
@@ -1060,7 +1060,7 @@ exports.products = [
         color: "Grey",
         size: "600 x 600mm",
         finish: "Matt",
-        thickness: "10mm"
+        thickness: "10mm",
     },
     {
         name: "Opaco Tiles",
@@ -1070,7 +1070,7 @@ exports.products = [
         color: "Beige",
         size: "600 x 600mm",
         finish: "Matt",
-        thickness: "10mm"
+        thickness: "10mm",
     },
     {
         name: "Opaco Tiles",
@@ -1080,7 +1080,7 @@ exports.products = [
         color: "Grey",
         size: "600 x 600mm",
         finish: "Matt",
-        thickness: "10mm"
+        thickness: "10mm",
     },
     {
         name: "Opaco Tiles",
@@ -1090,7 +1090,7 @@ exports.products = [
         color: "Beige",
         size: "600 x 600mm",
         finish: "Matt",
-        thickness: "10mm"
+        thickness: "10mm",
     },
     {
         name: "Strutturato Tiles",
@@ -1100,7 +1100,7 @@ exports.products = [
         color: "Matt Black",
         size: "600 x 600mm",
         finish: "Structured",
-        thickness: "10mm"
+        thickness: "10mm",
     },
     {
         name: "Strutturato Tiles",
@@ -1110,7 +1110,7 @@ exports.products = [
         color: "Leather Black",
         size: "600 x 600mm",
         finish: "Structured",
-        thickness: "10mm"
+        thickness: "10mm",
     },
     {
         name: "Terrazzo Tiles",
@@ -1120,7 +1120,7 @@ exports.products = [
         color: "Craft Terrazzo",
         size: "600 x 600mm",
         finish: "Matt",
-        thickness: "10mm"
+        thickness: "10mm",
     },
     {
         name: "Terrazzo Tiles",
@@ -1130,7 +1130,7 @@ exports.products = [
         color: "Light Grey",
         size: "600 x 600mm",
         finish: "Matt",
-        thickness: "10mm"
+        thickness: "10mm",
     },
     {
         name: "Terrazzo Tiles",
@@ -1140,7 +1140,7 @@ exports.products = [
         color: "Medium Grey",
         size: "600 x 600mm",
         finish: "Matt",
-        thickness: "10mm"
+        thickness: "10mm",
     },
     {
         name: "Terrazzo Tiles",
@@ -1150,7 +1150,7 @@ exports.products = [
         color: "Grey",
         size: "600 x 600mm",
         finish: "Matt",
-        thickness: "10mm"
+        thickness: "10mm",
     },
     {
         name: "Terrazzo Tiles",
@@ -1160,7 +1160,7 @@ exports.products = [
         color: "Coloured",
         size: "600 x 600mm",
         finish: "Matt",
-        thickness: "10mm"
+        thickness: "10mm",
     },
     {
         name: "Terrazzo Tiles",
@@ -1170,7 +1170,7 @@ exports.products = [
         color: "Black",
         size: "600 x 600mm",
         finish: "Matt",
-        thickness: "10mm"
+        thickness: "10mm",
     },
     {
         name: "Terrazzo Tiles",
@@ -1180,7 +1180,7 @@ exports.products = [
         color: "Medium Grey",
         size: "600 x 600mm",
         finish: "Matt",
-        thickness: "10mm"
+        thickness: "10mm",
     },
     {
         name: "Terrazzo Tiles",
@@ -1190,7 +1190,7 @@ exports.products = [
         color: "Grey",
         size: "600 x 600mm",
         finish: "Matt",
-        thickness: "10mm"
+        thickness: "10mm",
     },
     {
         name: "Terrazzo Tiles",
@@ -1200,7 +1200,7 @@ exports.products = [
         color: "Medium Grey",
         size: "600 x 600mm",
         finish: "Matt",
-        thickness: "10mm"
+        thickness: "10mm",
     },
     {
         name: "Terrazzo Tiles",
@@ -1210,7 +1210,7 @@ exports.products = [
         color: "Black",
         size: "600 x 600mm",
         finish: "Matt",
-        thickness: "10mm"
+        thickness: "10mm",
     },
     {
         name: "Terrazzo Tiles",
@@ -1220,7 +1220,7 @@ exports.products = [
         color: "Cream",
         size: "600 x 600mm",
         finish: "Matt",
-        thickness: "10mm"
+        thickness: "10mm",
     },
     {
         name: "Terrazzo Tiles",
@@ -1230,7 +1230,7 @@ exports.products = [
         color: "Speckled",
         size: "600 x 600mm",
         finish: "Matt",
-        thickness: "10mm"
+        thickness: "10mm",
     },
     {
         name: "Lampang Tiles",
@@ -1240,7 +1240,7 @@ exports.products = [
         color: "Ocean Blue",
         size: "48 x 48mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Lampang Tiles",
@@ -1250,7 +1250,7 @@ exports.products = [
         color: "Lake Blue",
         size: "48 x 48mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Lampang Tiles",
@@ -1260,7 +1260,7 @@ exports.products = [
         color: "Pearl White",
         size: "48 x 48mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Lampang Tiles",
@@ -1270,7 +1270,7 @@ exports.products = [
         color: "Coral Green",
         size: "48 x 48mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Lampang Tiles",
@@ -1280,7 +1280,7 @@ exports.products = [
         color: "Marine Blue",
         size: "48 x 48mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Lampang Tiles",
@@ -1290,7 +1290,7 @@ exports.products = [
         color: "Pacific Green",
         size: "48 x 48mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Lampang Tiles",
@@ -1300,7 +1300,7 @@ exports.products = [
         color: "Navy Blue",
         size: "48 x 48mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Lampang Tiles",
@@ -1310,7 +1310,7 @@ exports.products = [
         color: "Light Green",
         size: "48 x 48mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Lampang Tiles",
@@ -1320,7 +1320,7 @@ exports.products = [
         color: "Aqsa Blue",
         size: "100 x 100mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Lampang Tiles",
@@ -1330,7 +1330,7 @@ exports.products = [
         color: "Black",
         size: "100 x 100mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Lampang Tiles",
@@ -1340,7 +1340,7 @@ exports.products = [
         color: "Brown",
         size: "100 x 100mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Lampang Tiles",
@@ -1350,7 +1350,7 @@ exports.products = [
         color: "Celadon Blue",
         size: "100 x 100mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Lampang Tiles",
@@ -1360,7 +1360,7 @@ exports.products = [
         color: "Celadon Dark Green",
         size: "100 x 100mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Lampang Tiles",
@@ -1370,7 +1370,7 @@ exports.products = [
         color: "Celadon Light Green",
         size: "100 x 100mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Lampang Tiles",
@@ -1380,7 +1380,7 @@ exports.products = [
         color: null,
         size: "100 x 100mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Lampang Tiles",
@@ -1390,7 +1390,7 @@ exports.products = [
         color: "Dark Blue",
         size: "100 x 100mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Lampang Tiles",
@@ -1400,7 +1400,7 @@ exports.products = [
         color: "Golden Yellow",
         size: "100 x 100mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Lampang Tiles",
@@ -1410,7 +1410,7 @@ exports.products = [
         color: "Grey",
         size: "100 x 100mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Lampang Tiles",
@@ -1420,7 +1420,7 @@ exports.products = [
         color: "Medium Black",
         size: "100 x 100mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Lampang Tiles",
@@ -1430,7 +1430,7 @@ exports.products = [
         color: "Ocean Blue",
         size: "100 x 100mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Lampang Tiles",
@@ -1440,7 +1440,7 @@ exports.products = [
         color: "Summer Green",
         size: "100 x 100mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Lampang Tiles",
@@ -1450,7 +1450,7 @@ exports.products = [
         color: "Turquoise Blue",
         size: "100 x 100mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Lampang Tiles",
@@ -1460,7 +1460,7 @@ exports.products = [
         color: "Turquoise Green",
         size: "100 x 100mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Lampang Tiles",
@@ -1470,7 +1470,7 @@ exports.products = [
         color: "White",
         size: "100 x 100mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Spain Handmade",
@@ -1480,7 +1480,7 @@ exports.products = [
         color: "Blue",
         size: "75 x 150mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Spain Handmade",
@@ -1490,7 +1490,7 @@ exports.products = [
         color: "Cream",
         size: "75 x 150mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Spain Handmade",
@@ -1500,7 +1500,7 @@ exports.products = [
         color: "Light Green",
         size: "75 x 150mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Spain Handmade",
@@ -1510,7 +1510,7 @@ exports.products = [
         color: "Mint Blue",
         size: "75 x 150mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Spain Handmade",
@@ -1520,7 +1520,7 @@ exports.products = [
         color: "Green Emerald",
         size: "75 x 300mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Spain Handmade",
@@ -1530,7 +1530,7 @@ exports.products = [
         color: "Metallic Gold",
         size: "75 x 300mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Spain Handmade",
@@ -1540,7 +1540,7 @@ exports.products = [
         color: "Metallic Silver",
         size: "75 x 300mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Spain Handmade",
@@ -1550,7 +1550,7 @@ exports.products = [
         color: "Sky Blue",
         size: "75 x 300mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Spain Handmade",
@@ -1560,7 +1560,7 @@ exports.products = [
         color: "Vintage Casti Blue",
         size: "75 x 300mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Marble-like Tiles",
@@ -1570,7 +1570,7 @@ exports.products = [
         color: "White",
         size: "800 x 800mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Marble-like Tiles",
@@ -1580,7 +1580,7 @@ exports.products = [
         color: "White",
         size: "800 x 800mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Marble-like Tiles",
@@ -1590,7 +1590,7 @@ exports.products = [
         color: "Carrara White",
         size: "800 x 800mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Marble-like Tiles",
@@ -1600,7 +1600,7 @@ exports.products = [
         color: "Light Grey",
         size: "800 x 800mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Marble-like Tiles",
@@ -1610,7 +1610,7 @@ exports.products = [
         color: "Medium Grey",
         size: "800 x 800mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Marble-like Tiles",
@@ -1620,7 +1620,7 @@ exports.products = [
         color: "Light Grey",
         size: "800 x 800mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Marble-like Tiles",
@@ -1630,7 +1630,7 @@ exports.products = [
         color: "Dark Grey",
         size: "800 x 800mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Marble-like Tiles",
@@ -1640,7 +1640,7 @@ exports.products = [
         color: "Beige",
         size: "800 x 800mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Wood Tiles",
@@ -1650,7 +1650,7 @@ exports.products = [
         color: "Maple",
         size: "200 x 1000mm",
         finish: "Wood Grain",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Wood Tiles",
@@ -1660,7 +1660,7 @@ exports.products = [
         color: "Poplar",
         size: "200 x 1000mm",
         finish: "Wood Grain",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Wood Tiles",
@@ -1670,7 +1670,7 @@ exports.products = [
         color: "Red Birch",
         size: "200 x 1000mm",
         finish: "Wood Grain",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Wood Tiles",
@@ -1680,7 +1680,7 @@ exports.products = [
         color: "Red Oak",
         size: "200 x 1000mm",
         finish: "Wood Grain",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Wood Tiles",
@@ -1690,7 +1690,7 @@ exports.products = [
         color: "Dark Walnut",
         size: "200 x 1000mm",
         finish: "Wood Grain",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Wood Tiles",
@@ -1700,7 +1700,7 @@ exports.products = [
         color: "Ebony",
         size: "200 x 1000mm",
         finish: "Wood Grain",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Wood Tiles",
@@ -1710,7 +1710,7 @@ exports.products = [
         color: "Honey Maple",
         size: "200 x 1000mm",
         finish: "Wood Grain",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Wood Tiles",
@@ -1720,7 +1720,7 @@ exports.products = [
         color: "Special Walnut",
         size: "200 x 1000mm",
         finish: "Wood Grain",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Wood Tiles",
@@ -1730,7 +1730,7 @@ exports.products = [
         color: "English Chestnut",
         size: "200 x 1200mm",
         finish: "Wood Grain",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Wood Tiles",
@@ -1740,7 +1740,7 @@ exports.products = [
         color: "Natural",
         size: "200 x 1200mm",
         finish: "Wood Grain",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Wood Tiles",
@@ -1750,7 +1750,7 @@ exports.products = [
         color: "Pine",
         size: "200 x 1200mm",
         finish: "Wood Grain",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Wood Tiles",
@@ -1760,7 +1760,7 @@ exports.products = [
         color: "Weathered Oak",
         size: "200 x 1200mm",
         finish: "Wood Grain",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Tenue Tiles",
@@ -1770,7 +1770,7 @@ exports.products = [
         color: "White Marble",
         size: "750 x 1500mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Tenue Tiles",
@@ -1780,7 +1780,7 @@ exports.products = [
         color: "Beige",
         size: "750 x 1500mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Tenue Tiles",
@@ -1790,7 +1790,7 @@ exports.products = [
         color: "Light Grey",
         size: "750 x 1500mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Tenue Tiles",
@@ -1800,7 +1800,7 @@ exports.products = [
         color: "Dark Grey",
         size: "750 x 1500mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Grande Classic",
@@ -1810,7 +1810,7 @@ exports.products = [
         color: "Grey",
         size: "900 x 1800mm",
         finish: "Matt",
-        thickness: "10mm"
+        thickness: "10mm",
     },
     {
         name: "Grande Classic",
@@ -1820,7 +1820,7 @@ exports.products = [
         color: "Grey",
         size: "900 x 1800mm",
         finish: "Matt",
-        thickness: "10mm"
+        thickness: "10mm",
     },
     {
         name: "Grande Classic",
@@ -1830,7 +1830,7 @@ exports.products = [
         color: "Light Grey",
         size: "900 x 1800mm",
         finish: "Matt",
-        thickness: "10mm"
+        thickness: "10mm",
     },
     {
         name: "Grande Classic",
@@ -1840,7 +1840,7 @@ exports.products = [
         color: "Black",
         size: "900 x 1800mm",
         finish: "Matt",
-        thickness: "10mm"
+        thickness: "10mm",
     },
     {
         name: "Grande Classic",
@@ -1850,7 +1850,7 @@ exports.products = [
         color: "Baltic",
         size: "900 x 1800mm",
         finish: "Polished",
-        thickness: "10mm"
+        thickness: "10mm",
     },
     {
         name: "Grande Classic",
@@ -1860,7 +1860,7 @@ exports.products = [
         color: "Ash",
         size: "900 x 1800mm",
         finish: "Polished",
-        thickness: "10mm"
+        thickness: "10mm",
     },
     {
         name: "Grande Classic",
@@ -1870,7 +1870,7 @@ exports.products = [
         color: "Mystic",
         size: "900 x 1800mm",
         finish: "Polished",
-        thickness: "10mm"
+        thickness: "10mm",
     },
     {
         name: "Grande Classic",
@@ -1880,7 +1880,7 @@ exports.products = [
         color: "Black",
         size: "900 x 1800mm",
         finish: "Polished",
-        thickness: "10mm"
+        thickness: "10mm",
     },
     {
         name: "Grande Classic",
@@ -1890,7 +1890,7 @@ exports.products = [
         color: "Light Grey",
         size: "900 x 1800mm",
         finish: "Polished",
-        thickness: "10mm"
+        thickness: "10mm",
     },
     {
         name: "Grande Classic",
@@ -1900,7 +1900,7 @@ exports.products = [
         color: "Gold Volakas",
         size: "900 x 1800mm",
         finish: "Polished",
-        thickness: "10mm"
+        thickness: "10mm",
     },
     {
         name: "Grande Classic",
@@ -1910,7 +1910,7 @@ exports.products = [
         color: "Carrara",
         size: "900 x 1800mm",
         finish: "Polished",
-        thickness: "10mm"
+        thickness: "10mm",
     },
     {
         name: "Star Diamond",
@@ -1920,7 +1920,7 @@ exports.products = [
         color: "White Marble",
         size: "900 x 1800mm",
         finish: "Polished",
-        thickness: "10mm"
+        thickness: "10mm",
     },
     {
         name: "Star Diamond",
@@ -1930,7 +1930,7 @@ exports.products = [
         color: "Multi Colour",
         size: "900 x 1800mm",
         finish: "Polished",
-        thickness: "10mm"
+        thickness: "10mm",
     },
     {
         name: "Magic Slate",
@@ -1940,7 +1940,7 @@ exports.products = [
         color: "Ivory",
         size: "900 x 1800mm",
         finish: "Matt/Polished",
-        thickness: "10mm"
+        thickness: "10mm",
     },
     {
         name: "Magic Slate",
@@ -1950,7 +1950,7 @@ exports.products = [
         color: "Light Grey",
         size: "900 x 1800mm",
         finish: "Matt/Polished",
-        thickness: "10mm"
+        thickness: "10mm",
     },
     {
         name: "Magic Slate",
@@ -1960,7 +1960,7 @@ exports.products = [
         color: "Black",
         size: "900 x 1800mm",
         finish: "Matt/Polished",
-        thickness: "10mm"
+        thickness: "10mm",
     },
     {
         name: "Imprint",
@@ -1970,7 +1970,7 @@ exports.products = [
         color: "Blue",
         size: "800 x 2600mm",
         finish: "Matt",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Imprint",
@@ -1980,7 +1980,7 @@ exports.products = [
         color: "Beige",
         size: "800 x 2600mm",
         finish: "Matt",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Imprint",
@@ -1990,7 +1990,7 @@ exports.products = [
         color: "Pink",
         size: "800 x 2600mm",
         finish: "Matt",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Pearl Slate",
@@ -2000,7 +2000,7 @@ exports.products = [
         color: "Dark Grey",
         size: "800 x 2600mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Pearl Slate",
@@ -2010,7 +2010,7 @@ exports.products = [
         color: "White",
         size: "800 x 2600mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Pearl Slate",
@@ -2020,7 +2020,7 @@ exports.products = [
         color: "White",
         size: "800 x 2600mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Pearl Slate",
@@ -2030,7 +2030,7 @@ exports.products = [
         color: "Greenish",
         size: "800 x 2600mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Pearl Slate",
@@ -2040,7 +2040,7 @@ exports.products = [
         color: "White",
         size: "800 x 2600mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Pearl Slate",
@@ -2050,7 +2050,7 @@ exports.products = [
         color: "Light Grey",
         size: "800 x 2600mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Pearl Slate",
@@ -2060,7 +2060,7 @@ exports.products = [
         color: "Light grey",
         size: "800 x 2600mm",
         finish: "Polished",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Archistra",
@@ -2070,7 +2070,7 @@ exports.products = [
         color: null,
         size: "60 x 120cm",
         finish: null,
-        thickness: "4.5cm"
+        thickness: "4.5cm",
     },
     {
         name: "Archistra",
@@ -2080,7 +2080,7 @@ exports.products = [
         color: null,
         size: "60 x 120cm",
         finish: null,
-        thickness: "4.5cm"
+        thickness: "4.5cm",
     },
     {
         name: "Archistra",
@@ -2090,7 +2090,7 @@ exports.products = [
         color: null,
         size: "60 x 120cm",
         finish: null,
-        thickness: "4.5cm"
+        thickness: "4.5cm",
     },
     {
         name: "Archistra",
@@ -2100,7 +2100,7 @@ exports.products = [
         color: null,
         size: "60 x 120cm",
         finish: null,
-        thickness: "3-9cm"
+        thickness: "3-9cm",
     },
     {
         name: "Archistra",
@@ -2110,7 +2110,7 @@ exports.products = [
         color: null,
         size: "60 x 120cm",
         finish: null,
-        thickness: "3-9cm"
+        thickness: "3-9cm",
     },
     {
         name: "Archistra",
@@ -2120,7 +2120,7 @@ exports.products = [
         color: null,
         size: "60 x 120cm",
         finish: null,
-        thickness: "3-9cm"
+        thickness: "3-9cm",
     },
     {
         name: "Archistra",
@@ -2130,7 +2130,7 @@ exports.products = [
         color: null,
         size: "60 x 120cm",
         finish: null,
-        thickness: "3-9cm"
+        thickness: "3-9cm",
     },
     {
         name: "Archistra",
@@ -2140,7 +2140,7 @@ exports.products = [
         color: null,
         size: "60 x 120cm",
         finish: null,
-        thickness: "1-3cm"
+        thickness: "1-3cm",
     },
     {
         name: "Archistra",
@@ -2150,7 +2150,7 @@ exports.products = [
         color: null,
         size: "60 x 120cm",
         finish: null,
-        thickness: "1-3cm"
+        thickness: "1-3cm",
     },
     {
         name: "Archistra",
@@ -2160,7 +2160,7 @@ exports.products = [
         color: null,
         size: "60 x 120cm",
         finish: null,
-        thickness: "1-3cm"
+        thickness: "1-3cm",
     },
     {
         name: "Archistra",
@@ -2170,7 +2170,7 @@ exports.products = [
         color: null,
         size: "60 x 120cm",
         finish: null,
-        thickness: "1-3cm"
+        thickness: "1-3cm",
     },
     {
         name: "Archistra",
@@ -2180,7 +2180,7 @@ exports.products = [
         color: null,
         size: "60 x 120cm",
         finish: null,
-        thickness: "1-3cm"
+        thickness: "1-3cm",
     },
     {
         name: "Archistra",
@@ -2190,7 +2190,7 @@ exports.products = [
         color: null,
         size: "60 x 120cm",
         finish: null,
-        thickness: "1-3cm"
+        thickness: "1-3cm",
     },
     {
         name: "Brick Veneer",
@@ -2200,7 +2200,7 @@ exports.products = [
         color: null,
         size: "6.4 x 21.7cm",
         finish: null,
-        thickness: "5-6mm"
+        thickness: "5-6mm",
     },
     {
         name: "Brick Veneer",
@@ -2210,7 +2210,7 @@ exports.products = [
         color: null,
         size: "6.4 x 21.7cm",
         finish: null,
-        thickness: "5-6mm"
+        thickness: "5-6mm",
     },
     {
         name: "Brick Veneer",
@@ -2220,7 +2220,7 @@ exports.products = [
         color: null,
         size: "5.8 x 18cm",
         finish: null,
-        thickness: "1-2.5mm"
+        thickness: "1-2.5mm",
     },
     {
         name: "Brick Veneer",
@@ -2230,7 +2230,7 @@ exports.products = [
         color: null,
         size: "5.8 x 18cm",
         finish: null,
-        thickness: "1-2.5mm"
+        thickness: "1-2.5mm",
     },
     {
         name: "Brick Veneer",
@@ -2240,7 +2240,7 @@ exports.products = [
         color: null,
         size: "6.5 x 20cm",
         finish: null,
-        thickness: "3mm"
+        thickness: "3mm",
     },
     {
         name: "Brick Veneer",
@@ -2250,7 +2250,7 @@ exports.products = [
         color: null,
         size: "6.5 x 20cm",
         finish: null,
-        thickness: "3mm"
+        thickness: "3mm",
     },
     {
         name: "Brick Veneer",
@@ -2260,7 +2260,7 @@ exports.products = [
         color: null,
         size: "6.5 x 20cm",
         finish: null,
-        thickness: "3mm"
+        thickness: "3mm",
     },
     {
         name: "Brick Veneer",
@@ -2270,7 +2270,7 @@ exports.products = [
         color: null,
         size: "6.5 x 20cm",
         finish: null,
-        thickness: "3mm"
+        thickness: "3mm",
     },
     {
         name: "Brick Veneer",
@@ -2280,7 +2280,7 @@ exports.products = [
         color: null,
         size: "6.4 x 19.4cm",
         finish: null,
-        thickness: "3-4mm"
+        thickness: "3-4mm",
     },
     {
         name: "Brick Veneer",
@@ -2290,7 +2290,7 @@ exports.products = [
         color: null,
         size: "6.4 x 19.4cm",
         finish: null,
-        thickness: "3-4mm"
+        thickness: "3-4mm",
     },
     {
         name: "Brick Veneer",
@@ -2300,7 +2300,7 @@ exports.products = [
         color: null,
         size: "6.4 x 21.7cm",
         finish: null,
-        thickness: "4-7mm"
+        thickness: "4-7mm",
     },
     {
         name: "Brick Veneer",
@@ -2310,7 +2310,7 @@ exports.products = [
         color: null,
         size: "6.4 x 21.7cm",
         finish: null,
-        thickness: "4-7mm"
+        thickness: "4-7mm",
     },
     {
         name: "Edge",
@@ -2320,7 +2320,7 @@ exports.products = [
         color: null,
         size: "20 x 20cm",
         finish: null,
-        thickness: "2.3cm"
+        thickness: "2.3cm",
     },
     {
         name: "Edge",
@@ -2330,7 +2330,7 @@ exports.products = [
         color: null,
         size: "40 x 8.4cm",
         finish: null,
-        thickness: "2.3cm"
+        thickness: "2.3cm",
     },
     {
         name: "Edge",
@@ -2340,7 +2340,7 @@ exports.products = [
         color: null,
         size: "40 x 8.4cm",
         finish: null,
-        thickness: "2.3cm"
+        thickness: "2.3cm",
     },
     {
         name: "Stone Veneer",
@@ -2350,7 +2350,7 @@ exports.products = [
         color: null,
         size: "10 x 20cm",
         finish: null,
-        thickness: "1-3.5cm"
+        thickness: "1-3.5cm",
     },
     {
         name: "Stone Veneer",
@@ -2360,7 +2360,7 @@ exports.products = [
         color: null,
         size: "10 x 30cm",
         finish: null,
-        thickness: "1-3.5cm"
+        thickness: "1-3.5cm",
     },
     {
         name: "Stone Veneer",
@@ -2370,7 +2370,7 @@ exports.products = [
         color: null,
         size: "10 x 50cm",
         finish: null,
-        thickness: "1-3.5cm"
+        thickness: "1-3.5cm",
     },
     {
         name: "Stone Veneer",
@@ -2380,7 +2380,7 @@ exports.products = [
         color: null,
         size: "10 x 20cm",
         finish: null,
-        thickness: "1-3.5cm"
+        thickness: "1-3.5cm",
     },
     {
         name: "Stone Veneer",
@@ -2390,7 +2390,7 @@ exports.products = [
         color: null,
         size: "10 x 30cm",
         finish: null,
-        thickness: "1-3.5cm"
+        thickness: "1-3.5cm",
     },
     {
         name: "Stone Veneer",
@@ -2400,7 +2400,7 @@ exports.products = [
         color: null,
         size: "10 x 50cm",
         finish: null,
-        thickness: "1-3.5cm"
+        thickness: "1-3.5cm",
     },
     {
         name: "Stone Veneer",
@@ -2410,7 +2410,7 @@ exports.products = [
         color: null,
         size: "10 x 20cm",
         finish: null,
-        thickness: "1-3.5cm"
+        thickness: "1-3.5cm",
     },
     {
         name: "Stone Veneer",
@@ -2420,7 +2420,7 @@ exports.products = [
         color: null,
         size: "10 x 30cm",
         finish: null,
-        thickness: "1-3.5cm"
+        thickness: "1-3.5cm",
     },
     {
         name: "Stone Veneer",
@@ -2430,7 +2430,7 @@ exports.products = [
         color: null,
         size: "10 x 50cm",
         finish: null,
-        thickness: "1-3.5cm"
+        thickness: "1-3.5cm",
     },
     {
         name: "Stone Veneer",
@@ -2440,7 +2440,7 @@ exports.products = [
         color: null,
         size: "10 x 20cm",
         finish: null,
-        thickness: "1-3.5cm"
+        thickness: "1-3.5cm",
     },
     {
         name: "Stone Veneer",
@@ -2450,7 +2450,7 @@ exports.products = [
         color: null,
         size: "10 x 30cm",
         finish: null,
-        thickness: "1-3.5cm"
+        thickness: "1-3.5cm",
     },
     {
         name: "Stone Veneer",
@@ -2460,7 +2460,7 @@ exports.products = [
         color: null,
         size: "10 x 50cm",
         finish: null,
-        thickness: "1-3.5cm"
+        thickness: "1-3.5cm",
     },
     {
         name: "Stone Veneer",
@@ -2470,7 +2470,7 @@ exports.products = [
         color: null,
         size: "5 x 19cm",
         finish: null,
-        thickness: "8mm"
+        thickness: "8mm",
     },
     {
         name: "Stone Veneer",
@@ -2480,7 +2480,7 @@ exports.products = [
         color: null,
         size: "5 x 19cm",
         finish: null,
-        thickness: "8mm"
+        thickness: "8mm",
     },
     {
         name: "Stone Veneer",
@@ -2490,7 +2490,7 @@ exports.products = [
         color: null,
         size: "10 x 50cm",
         finish: null,
-        thickness: "1-2.5cm"
+        thickness: "1-2.5cm",
     },
     {
         name: "Stone Veneer",
@@ -2500,7 +2500,7 @@ exports.products = [
         color: null,
         size: "10 x 50cm",
         finish: null,
-        thickness: "1-2.5cm"
+        thickness: "1-2.5cm",
     },
     {
         name: "Stone Veneer",
@@ -2510,7 +2510,7 @@ exports.products = [
         color: null,
         size: "12 x 40cm",
         finish: null,
-        thickness: "1-4.5cm"
+        thickness: "1-4.5cm",
     },
     {
         name: "Stone Veneer",
@@ -2520,7 +2520,7 @@ exports.products = [
         color: null,
         size: "12 x 40cm",
         finish: null,
-        thickness: "1-3cm"
+        thickness: "1-3cm",
     },
     {
         name: "Stone Veneer",
@@ -2530,7 +2530,7 @@ exports.products = [
         color: null,
         size: "12 x 40cm",
         finish: null,
-        thickness: "1-3cm"
+        thickness: "1-3cm",
     },
     {
         name: "Stone Veneer",
@@ -2540,7 +2540,7 @@ exports.products = [
         color: null,
         size: "15 x 50cm",
         finish: null,
-        thickness: "1-2.5cm"
+        thickness: "1-2.5cm",
     },
     {
         name: "Stone Veneer",
@@ -2550,7 +2550,7 @@ exports.products = [
         color: null,
         size: "15 x 50cm",
         finish: null,
-        thickness: "1-2.5cm"
+        thickness: "1-2.5cm",
     },
     {
         name: "Stone Veneer",
@@ -2560,7 +2560,7 @@ exports.products = [
         color: null,
         size: "12 x 60cm",
         finish: null,
-        thickness: "1-2cm"
+        thickness: "1-2cm",
     },
     {
         name: "Stone Veneer",
@@ -2570,8 +2570,8 @@ exports.products = [
         color: null,
         size: "12 x 60cm",
         finish: null,
-        thickness: "1-2cm"
-    }
+        thickness: "1-2cm",
+    },
 ];
 exports.addProducts1 = [
     {
@@ -2582,7 +2582,7 @@ exports.addProducts1 = [
         color: "Beige",
         size: "300 x 600mm",
         finish: "Matt",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Natura Tiles",
@@ -2592,7 +2592,7 @@ exports.addProducts1 = [
         color: "Black",
         size: "300 x 600mm",
         finish: "Matt",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Natura Tiles",
@@ -2602,7 +2602,7 @@ exports.addProducts1 = [
         color: "Grey",
         size: "300 x 600mm",
         finish: "Matt",
-        thickness: null
+        thickness: null,
     },
     {
         name: "Natura Tiles",
@@ -2612,7 +2612,819 @@ exports.addProducts1 = [
         color: "Medium Brown",
         size: "300 x 600mm",
         finish: "Matt",
-        thickness: null
+        thickness: null,
+    },
+];
+exports.addProductsSanitaryKitchenWare = [
+    {
+        name: "Paper Holder",
+        code: "SRT314-RG",
+        description: null,
+        variation: null,
+        color: "Black + Rose Gold",
+        size: null,
+        finish: null,
+        thickness: null,
+    },
+    {
+        name: "Paper Holder",
+        code: "SRT315-RG",
+        description: null,
+        variation: null,
+        color: "Rose Gold",
+        size: null,
+        finish: null,
+        thickness: null,
+    },
+    {
+        name: "Paper Holder",
+        code: "SRT317-GY",
+        description: null,
+        variation: null,
+        color: "Gold Yellow",
+        size: null,
+        finish: null,
+        thickness: null,
+    },
+    {
+        name: "Paper Holder",
+        code: "SRT364-HP",
+        description: null,
+        variation: null,
+        color: "Chrome",
+        size: null,
+        finish: null,
+        thickness: null,
+    },
+    {
+        name: "Towel Shelf",
+        code: "SRT345-HP",
+        description: null,
+        variation: null,
+        color: "Chrome",
+        size: null,
+        finish: null,
+        thickness: null,
+    },
+    {
+        name: "Towel Shelf",
+        code: "SRT443-RG",
+        description: null,
+        variation: null,
+        color: "Rose Gold",
+        size: null,
+        finish: null,
+        thickness: null,
+    },
+    {
+        name: "Towel Shelf",
+        code: "SRT445-GY",
+        description: null,
+        variation: null,
+        color: "Gold Yellow",
+        size: null,
+        finish: null,
+        thickness: null,
+    },
+    {
+        name: "Towel Shelf",
+        code: "SRT446-RG",
+        description: null,
+        variation: null,
+        color: "Black + Rose Gold",
+        size: null,
+        finish: null,
+        thickness: null,
+    },
+    {
+        name: "Tower Bar",
+        code: "SRT362-HP",
+        description: null,
+        variation: null,
+        color: "Chrome",
+        size: null,
+        finish: null,
+        thickness: null,
+    },
+    {
+        name: "Tower Bar",
+        code: "SRT363-HP",
+        description: null,
+        variation: null,
+        color: "Chrome",
+        size: null,
+        finish: null,
+        thickness: null,
+    },
+    {
+        name: "Tower Bar",
+        code: "SRT440-RG",
+        description: null,
+        variation: null,
+        color: "Rose Gold",
+        size: null,
+        finish: null,
+        thickness: null,
+    },
+    {
+        name: "Tower Bar",
+        code: "SRT442-GY",
+        description: null,
+        variation: null,
+        color: "Gold Yellow",
+        size: null,
+        finish: null,
+        thickness: null,
+    },
+    {
+        name: "Tower Bar",
+        code: "SRT449-RG",
+        description: null,
+        variation: null,
+        color: "Black + Rose Gold",
+        size: null,
+        finish: null,
+        thickness: null,
+    },
+    {
+        name: "Tower Bar Double",
+        code: "SRT450-RG",
+        description: null,
+        variation: null,
+        color: "Black + Rose Gold",
+        size: null,
+        finish: null,
+        thickness: null,
+    },
+    {
+        name: "Tower Bar Double",
+        code: "SRT451-RG",
+        description: null,
+        variation: null,
+        color: "Rose Gold",
+        size: null,
+        finish: null,
+        thickness: null,
+    },
+    {
+        name: "Tower Bar Double",
+        code: "SRT453-GY",
+        description: null,
+        variation: null,
+        color: "Gold Yellow",
+        size: null,
+        finish: null,
+        thickness: null,
+    },
+    {
+        name: "Floor Trap",
+        code: "SRT384-6",
+        description: null,
+        variation: null,
+        color: "Chrome",
+        size: null,
+        finish: null,
+        thickness: null,
+    },
+    {
+        name: "Floor Trap",
+        code: "CB6635-BL",
+        description: null,
+        variation: null,
+        color: null,
+        size: null,
+        finish: null,
+        thickness: null,
+    },
+    {
+        name: "Floor Trap",
+        code: "CB6638",
+        description: null,
+        variation: null,
+        color: null,
+        size: null,
+        finish: null,
+        thickness: null,
+    },
+    {
+        name: "Basket",
+        code: "SRT2564-BL",
+        description: null,
+        variation: null,
+        color: "Black ",
+        size: null,
+        finish: null,
+        thickness: null,
+    },
+    {
+        name: "Pop Up Waste",
+        code: "SRTW2000",
+        description: null,
+        variation: null,
+        color: null,
+        size: null,
+        finish: null,
+        thickness: null,
+    },
+    {
+        name: "Pop Up Waste",
+        code: "SRTW5000",
+        description: null,
+        variation: null,
+        color: null,
+        size: null,
+        finish: null,
+        thickness: null,
+    },
+    {
+        name: "Pop Up Waste",
+        code: "SRTW5102-BL",
+        description: null,
+        variation: null,
+        color: "Black ",
+        size: null,
+        finish: null,
+        thickness: null,
+    },
+    {
+        name: "3 in 1 Bathroom Furniture",
+        code: "SRTBF11606A",
+        description: null,
+        variation: null,
+        color: null,
+        size: null,
+        finish: null,
+        thickness: null,
+    },
+    {
+        name: "3 in 1 Bathroom Furniture",
+        code: "SRTBF11827",
+        description: null,
+        variation: null,
+        color: null,
+        size: null,
+        finish: null,
+        thickness: null,
+    },
+    {
+        name: "3 in 1 Bathroom Furniture",
+        code: "SRTBF31512",
+        description: null,
+        variation: null,
+        color: null,
+        size: null,
+        finish: null,
+        thickness: null,
+    },
+    {
+        name: "6 in 1 Bathroom Furniture",
+        code: "SRTBF11705",
+        description: null,
+        variation: null,
+        color: null,
+        size: null,
+        finish: null,
+        thickness: null,
+    },
+    {
+        name: "6 in 1 Bathroom Furniture",
+        code: "SRTBF11707",
+        description: null,
+        variation: null,
+        color: null,
+        size: null,
+        finish: null,
+        thickness: null,
+    },
+    {
+        name: "6 in 1 Bathroom Furniture",
+        code: "SRTBF11708",
+        description: null,
+        variation: null,
+        color: null,
+        size: null,
+        finish: null,
+        thickness: null,
+    },
+    {
+        name: "6 in 1 Bathroom Furniture",
+        code: "SRTBF11713",
+        description: null,
+        variation: null,
+        color: null,
+        size: null,
+        finish: null,
+        thickness: null,
+    },
+    {
+        name: "6 in 1 Bathroom Furniture",
+        code: "SRTBF31415",
+        description: null,
+        variation: null,
+        color: null,
+        size: null,
+        finish: null,
+        thickness: null,
+    },
+    {
+        name: "6 in 1 Bathroom Furniture",
+        code: "CBF3605",
+        description: null,
+        variation: null,
+        color: "White",
+        size: null,
+        finish: null,
+        thickness: null,
+    },
+    {
+        name: "6 in 1 Bathroom Furniture",
+        code: "CBFAL66618",
+        description: null,
+        variation: null,
+        color: "White",
+        size: null,
+        finish: null,
+        thickness: null,
+    },
+    {
+        name: "6 in 1 Bathroom Furniture",
+        code: "CBFAL66617",
+        description: null,
+        variation: null,
+        color: "Black",
+        size: null,
+        finish: null,
+        thickness: null,
+    },
+    {
+        name: "Mirror Cabinet",
+        code: "SRTMCB21512",
+        description: null,
+        variation: null,
+        color: "Brown",
+        size: null,
+        finish: null,
+        thickness: null,
+    },
+    {
+        name: "Mirror Cabinet",
+        code: "SRTMCB21606",
+        description: null,
+        variation: null,
+        color: "Brown",
+        size: null,
+        finish: null,
+        thickness: null,
+    },
+    {
+        name: "Hand Bidet",
+        code: "SRT25-CR",
+        description: null,
+        variation: null,
+        color: null,
+        size: null,
+        finish: null,
+        thickness: null,
+    },
+    {
+        name: "Two Way Tap",
+        code: "SRT59-CR",
+        description: null,
+        variation: null,
+        color: null,
+        size: null,
+        finish: null,
+        thickness: null,
+    },
+    {
+        name: "Hand Bidet",
+        code: "SRT86-CR",
+        description: null,
+        variation: null,
+        color: null,
+        size: null,
+        finish: null,
+        thickness: null,
+    },
+    {
+        name: "3 Functions Hand Shower",
+        code: "SRTSS3150",
+        description: null,
+        variation: null,
+        color: null,
+        size: null,
+        finish: null,
+        thickness: null,
+    },
+    {
+        name: "3 Functions Hand Shower",
+        code: "SRTSS7303",
+        description: null,
+        variation: null,
+        color: null,
+        size: null,
+        finish: null,
+        thickness: null,
+    },
+    {
+        name: "Angle Valve",
+        code: "SRTWT908SS",
+        description: null,
+        variation: null,
+        color: null,
+        size: null,
+        finish: null,
+        thickness: null,
+    },
+    {
+        name: "Bip Tap",
+        code: "SRTWT2206",
+        description: null,
+        variation: null,
+        color: null,
+        size: null,
+        finish: null,
+        thickness: null,
+    },
+    {
+        name: "Two Way Tap",
+        code: "SRTWT2214",
+        description: null,
+        variation: null,
+        color: null,
+        size: null,
+        finish: null,
+        thickness: null,
+    },
+    {
+        name: "Hose Bib Tap",
+        code: "SRTWT2225",
+        description: null,
+        variation: null,
+        color: null,
+        size: null,
+        finish: null,
+        thickness: null,
+    },
+    {
+        name: "Basin Cold Tap",
+        code: "SRTWT5807",
+        description: null,
+        variation: null,
+        color: null,
+        size: null,
+        finish: null,
+        thickness: null,
+    },
+    {
+        name: "Hose Bib Tap",
+        code: "SRTWT5865-RG",
+        description: null,
+        variation: null,
+        color: "Black + Rose Gold",
+        size: null,
+        finish: null,
+        thickness: null,
+    },
+    {
+        name: "Basin Cold Tap",
+        code: "SRTWT7202",
+        description: null,
+        variation: null,
+        color: null,
+        size: null,
+        finish: null,
+        thickness: null,
+    },
+    {
+        name: "Basin Cold Tap",
+        code: "SRTWT7443",
+        description: null,
+        variation: null,
+        color: null,
+        size: null,
+        finish: null,
+        thickness: null,
+    },
+    {
+        name: "Basin Cold Tap",
+        code: "SRTWT7445",
+        description: null,
+        variation: null,
+        color: null,
+        size: null,
+        finish: null,
+        thickness: null,
+    },
+    {
+        name: "Basin Cold Tap",
+        code: "SRTWT7447-RG",
+        description: null,
+        variation: null,
+        color: "Black + Rose Gold",
+        size: null,
+        finish: null,
+        thickness: null,
+    },
+    {
+        name: "Exposed Shower",
+        code: "SRTWT7633",
+        description: null,
+        variation: null,
+        color: null,
+        size: null,
+        finish: null,
+        thickness: null,
+    },
+    {
+        name: "Basin Cold Tap",
+        code: "SRTWT7720",
+        description: null,
+        variation: null,
+        color: null,
+        size: null,
+        finish: null,
+        thickness: null,
+    },
+    {
+        name: "Basin Cold Tap",
+        code: "SRTWT8201",
+        description: null,
+        variation: null,
+        color: null,
+        size: null,
+        finish: null,
+        thickness: null,
+    },
+    {
+        name: "Exposed Shower",
+        code: "SRTWT9600HP",
+        description: null,
+        variation: null,
+        color: null,
+        size: null,
+        finish: null,
+        thickness: null,
+    },
+    {
+        name: "Exposed Shower",
+        code: "SRTWT9605-RG",
+        description: null,
+        variation: null,
+        color: null,
+        size: null,
+        finish: null,
+        thickness: null,
+    },
+    {
+        name: "One Piece WC",
+        code: "SRTWC200-S-RL-UF",
+        description: null,
+        variation: null,
+        color: null,
+        size: null,
+        finish: null,
+        thickness: null,
+    },
+    {
+        name: "One Piece WC",
+        code: "SRTWC8320-RL-UF",
+        description: null,
+        variation: null,
+        color: null,
+        size: null,
+        finish: null,
+        thickness: null,
+    },
+    {
+        name: "One Piece WC",
+        code: "SRTWC8383-RL-BL",
+        description: null,
+        variation: null,
+        color: "Black",
+        size: null,
+        finish: null,
+        thickness: null,
+    },
+    {
+        name: "One Piece WC",
+        code: "SRTWC8152-RL",
+        description: null,
+        variation: null,
+        color: null,
+        size: null,
+        finish: null,
+        thickness: null,
+    },
+    {
+        name: "Kitchen Tap",
+        code: "CB1540SS-BL",
+        description: null,
+        variation: null,
+        color: "Black",
+        size: null,
+        finish: null,
+        thickness: null,
+    },
+    {
+        name: "Kitchen Tap",
+        code: "CB2519SS",
+        description: null,
+        variation: null,
+        color: null,
+        size: null,
+        finish: null,
+        thickness: null,
+    },
+    {
+        name: "Kitchen Tap",
+        code: "SRTKT73SS-BL",
+        description: null,
+        variation: null,
+        color: null,
+        size: null,
+        finish: null,
+        thickness: null,
+    },
+    {
+        name: "Kitchen Tap",
+        code: "SRTKT1831SS",
+        description: null,
+        variation: null,
+        color: null,
+        size: null,
+        finish: null,
+        thickness: null,
+    },
+    {
+        name: "Kitchen Tap",
+        code: "SRTKT1832SS",
+        description: null,
+        variation: null,
+        color: null,
+        size: null,
+        finish: null,
+        thickness: null,
+    },
+    {
+        name: "Kitchen Tap",
+        code: "SRTKT1843SS",
+        description: null,
+        variation: null,
+        color: null,
+        size: null,
+        finish: null,
+        thickness: null,
+    },
+    {
+        name: "Kitchen Tap",
+        code: "SRTWT5803",
+        description: null,
+        variation: null,
+        color: null,
+        size: null,
+        finish: null,
+        thickness: null,
+    },
+    {
+        name: "Kitchen Tap",
+        code: "SRTWT5827",
+        description: null,
+        variation: null,
+        color: null,
+        size: null,
+        finish: null,
+        thickness: null,
+    },
+    {
+        name: "Kitchen Tap",
+        code: "SRTWT5848-RG",
+        description: null,
+        variation: null,
+        color: "Black",
+        size: null,
+        finish: null,
+        thickness: null,
+    },
+    {
+        name: "Kitchen Tap (Double)",
+        code: "SRTKT1852SS",
+        description: null,
+        variation: null,
+        color: null,
+        size: null,
+        finish: null,
+        thickness: null,
+    },
+    {
+        name: "Flexible Kitchen Tap",
+        code: "SRTKT1862SS",
+        description: null,
+        variation: null,
+        color: null,
+        size: null,
+        finish: null,
+        thickness: null,
+    },
+    {
+        name: "Wall Kitchen Tap",
+        code: "SRTKT1831SS",
+        description: null,
+        variation: null,
+        color: null,
+        size: null,
+        finish: null,
+        thickness: null,
+    },
+    {
+        name: "Wall Kitchen Tap",
+        code: "SRTKT1842SS",
+        description: null,
+        variation: null,
+        color: null,
+        size: null,
+        finish: null,
+        thickness: null,
+    },
+    {
+        name: "Wall Kitchen Tap",
+        code: "SRTWT5801",
+        description: null,
+        variation: null,
+        color: null,
+        size: null,
+        finish: null,
+        thickness: null,
+    },
+    {
+        name: "Wall Kitchen Tap (Double)",
+        code: "SRTKT1851SS",
+        description: null,
+        variation: null,
+        color: null,
+        size: null,
+        finish: null,
+        thickness: null,
+    },
+    {
+        name: "Flexible Wall Kitchen Tap",
+        code: "SRTKT1861SS",
+        description: null,
+        variation: null,
+        color: null,
+        size: null,
+        finish: null,
+        thickness: null,
+    },
+    {
+        name: "Kitchen Sink Basket",
+        code: "CKS333BK",
+        description: null,
+        variation: null,
+        color: null,
+        size: null,
+        finish: null,
+        thickness: null,
+    },
+    {
+        name: "Kitchen Sink",
+        code: "KS8745",
+        description: null,
+        variation: null,
+        color: null,
+        size: null,
+        finish: null,
+        thickness: null,
+    },
+    {
+        name: "Kitchen Sink",
+        code: "SRTKS6047-BL",
+        description: null,
+        variation: null,
+        color: "Black",
+        size: null,
+        finish: null,
+        thickness: null,
+    },
+    {
+        name: "Kitchen Sink",
+        code: "SRTKS6047",
+        description: null,
+        variation: null,
+        color: null,
+        size: null,
+        finish: null,
+        thickness: null,
+    },
+    {
+        name: "Kitchen Sink",
+        code: "SRTKS8047-BL",
+        description: null,
+        variation: null,
+        color: "Black",
+        size: null,
+        finish: null,
+        thickness: null,
     }
 ];
 //# sourceMappingURL=products.data.js.map

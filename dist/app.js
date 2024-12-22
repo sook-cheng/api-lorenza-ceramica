@@ -8,6 +8,7 @@ const cors_1 = __importDefault(require("@fastify/cors"));
 const routes_1 = require("./routes");
 const dotenv_1 = __importDefault(require("dotenv"));
 const mysql_1 = __importDefault(require("@fastify/mysql"));
+const multipart_1 = __importDefault(require("@fastify/multipart"));
 dotenv_1.default.config();
 const server = (0, fastify_1.default)();
 // const sequelize = new Sequelize({
@@ -47,8 +48,10 @@ server.register(cors_1.default, {
         return callback(null, true);
     }
 });
+server.register(multipart_1.default);
 server.register(routes_1.routes);
 server.register(routes_1.dataCreationRoutes);
+server.register(routes_1.boFunctionsRoutes);
 server.listen({ host: '127.0.0.1', port: 8888 }, (err, address) => {
     if (err) {
         console.error(err);
