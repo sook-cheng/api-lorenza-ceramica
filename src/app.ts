@@ -1,10 +1,11 @@
 import fastify from 'fastify';
 import cors from '@fastify/cors';
-import { dataCreationRoutes, routes } from './routes';
+import { boFunctionsRoutes, dataCreationRoutes, routes } from './routes';
 import fastifyPlugin from 'fastify-plugin';
 import { Sequelize } from "sequelize";
 import dotenv from 'dotenv';
 import fastifyMysql from '@fastify/mysql';
+import fastifyMultipart from '@fastify/multipart';
 
 dotenv.config();
 const server = fastify();
@@ -51,8 +52,11 @@ server.register(cors, {
     }
 });
 
+server.register(fastifyMultipart);
+
 server.register(routes);
 server.register(dataCreationRoutes);
+server.register(boFunctionsRoutes);
 
 server.listen({ host: '127.0.0.1', port: 8888 }, (err, address) => {
     if (err) {
