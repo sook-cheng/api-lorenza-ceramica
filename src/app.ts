@@ -1,6 +1,6 @@
 import fastify from 'fastify';
 import cors from '@fastify/cors';
-import { boFunctionsRoutes, dataCreationRoutes, routes } from './routes';
+import { dataCreationRoutes, routes } from './routes';
 import fastifyPlugin from 'fastify-plugin';
 import { Sequelize } from "sequelize";
 import dotenv from 'dotenv';
@@ -56,7 +56,6 @@ server.register(fastifyMultipart);
 
 server.register(routes);
 server.register(dataCreationRoutes);
-server.register(boFunctionsRoutes);
 
 server.listen({ host: '127.0.0.1', port: 8888 }, (err, address) => {
     if (err) {
