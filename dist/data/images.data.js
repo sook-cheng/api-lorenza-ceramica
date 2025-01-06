@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.images2 = exports.images = void 0;
+exports.images3 = exports.images2 = exports.images = void 0;
 exports.images = [
     {
         productId: 1,
@@ -2488,6 +2488,148 @@ exports.images2 = [
         productCode: "VA63M903MC",
         sequence: 1,
         type: "png",
+    },
+];
+exports.images3 = [
+    {
+        productName: "Tenue Tiles",
+        productCode: "XYN75F102",
+        sequence: 1,
+        type: "png",
+        isMocked: 0,
+    },
+    {
+        productName: "Tenue Tiles",
+        productCode: "XYN75F102",
+        sequence: 2,
+        type: "jpg",
+        isMocked: 0,
+    },
+    {
+        productName: "Tenue Tiles",
+        productCode: "XYN75F102",
+        sequence: 3,
+        type: "png",
+        isMocked: 1,
+    },
+    {
+        productName: "Tenue Tiles",
+        productCode: "XYN75F102",
+        sequence: 4,
+        type: "png",
+        isMocked: 1,
+    },
+    {
+        productName: "Tenue Tiles",
+        productCode: "XYN75F106",
+        sequence: 1,
+        type: "png",
+        isMocked: 0,
+    },
+    {
+        productName: "Tenue Tiles",
+        productCode: "XYN75F106",
+        sequence: 2,
+        type: "jpg",
+        isMocked: 0,
+    },
+    {
+        productName: "Tenue Tiles",
+        productCode: "XYN75F106",
+        sequence: 3,
+        type: "jpeg",
+        isMocked: 1,
+    },
+    {
+        productName: "Tenue Tiles",
+        productCode: "XYN75F106",
+        sequence: 4,
+        type: "png",
+        isMocked: 1,
+    },
+    {
+        productName: "Tenue Tiles",
+        productCode: "XYN75F107",
+        sequence: 1,
+        type: "png",
+        isMocked: 0,
+    },
+    {
+        productName: "Tenue Tiles",
+        productCode: "XYN75F107",
+        sequence: 2,
+        type: "jpg",
+        isMocked: 0,
+    },
+    {
+        productName: "Tenue Tiles",
+        productCode: "XYN75F107",
+        sequence: 3,
+        type: "png",
+        isMocked: 1,
+    },
+    {
+        productName: "Tenue Tiles",
+        productCode: "XYN75F107",
+        sequence: 4,
+        type: "png",
+        isMocked: 1,
+    },
+    {
+        productName: "Tenue Tiles",
+        productCode: "XYN75F201",
+        sequence: 1,
+        type: "png",
+        isMocked: 0,
+    },
+    {
+        productName: "Tenue Tiles",
+        productCode: "XYN75F201",
+        sequence: 2,
+        type: "jpg",
+        isMocked: 0,
+    },
+    {
+        productName: "Tenue Tiles",
+        productCode: "XYN75F201",
+        sequence: 3,
+        type: "jpeg",
+        isMocked: 1,
+    },
+    {
+        productName: "Marble-like Tiles",
+        productCode: "GF-MA80307",
+        sequence: 1,
+        type: "jpg",
+        isMocked: 0,
+    },
+    {
+        productName: "Marble-like Tiles",
+        productCode: "GF-MA80311",
+        sequence: 1,
+        type: "jpg",
+        isMocked: 0,
+    },
+    {
+        productName: "Marble-like Tiles",
+        productCode: "GF-MA80335",
+        sequence: 1,
+        type: "jpg",
+        isMocked: 0,
+    },
+    {
+        productName: "Marble-like Tiles",
+        productCode: "GF-MA80337",
+        sequence: 1,
+        type: "jpg",
+        isMocked: 0,
+    },
+    {
+        productName: "Marble-like Tiles",
+        productCode: "GR80095QM",
+        sequence: 1,
+        type: "jpg",
+        isMocked: 0,
     },
 ];
 //# sourceMappingURL=images.data.js.map

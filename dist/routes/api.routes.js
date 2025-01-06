@@ -4,14 +4,20 @@ exports.routes = routes;
 const functions_1 = require("../functions");
 async function routes(fastify) {
     // Add new routes here
+    fastify.get("/about-us", async (request, reply) => {
+        return (0, functions_1.getAboutUs)(fastify);
+    });
     fastify.get("/faq", async (request, reply) => {
-        return (0, functions_1.getFaqList)();
+        return (0, functions_1.getFaqList)(fastify);
     });
     fastify.get("/productsSideNavs", async (request, reply) => {
         return (0, functions_1.getAllProductsSideNavs)(fastify);
     });
     fastify.get("/categories", async (request, reply) => {
         return (0, functions_1.getAllCategories)(fastify);
+    });
+    fastify.get("/home-partners", async (request, reply) => {
+        return (0, functions_1.getHomePartners)(fastify);
     });
     fastify.get("/products", async (request, reply) => {
         return (0, functions_1.getAllProducts)(fastify);

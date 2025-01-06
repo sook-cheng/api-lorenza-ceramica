@@ -14,7 +14,9 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
     for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+__exportStar(require("./about-us"), exports);
 __exportStar(require("./faq"), exports);
+__exportStar(require("./home"), exports);
 __exportStar(require("./products"), exports);
 __exportStar(require("./product-details"), exports);
 __exportStar(require("./categories"), exports);

@@ -4,9 +4,9 @@ exports.dataCreationRoutes = dataCreationRoutes;
 const data_1 = require("../data");
 async function dataCreationRoutes(fastify) {
     fastify.get("/create-products", async (request, reply) => {
-        let sql = "INSERT INTO products (name,code,description,variation,color,size,finish,thickness) VALUES";
-        for (const p of data_1.addProducts1) {
-            sql += `('${p.name}','${p.code}','${p.description}','${p.variation}','${p.color}','${p.size}','${p.finish}','${p.thickness}'),`;
+        let sql = "INSERT INTO products (name,code,color) VALUES";
+        for (const p of data_1.addProductsSanitaryKitchenWare) {
+            sql += `('${p.name}','${p.code}','${p.color}'),`;
         }
         sql = sql.replaceAll("'null'", "null");
         return sql.substring(0, sql.length - 1) + ";";
@@ -145,6 +145,14 @@ async function dataCreationRoutes(fastify) {
         for (const p of data_1.images2) {
             sql += "\nINSERT INTO productsImages (productId,productName,productCode,sequence,type) ";
             sql += `SELECT id AS productId, name AS productName, '${p.productCode}' AS productCode, ${p.sequence} AS sequence, '${p.type}' AS type FROM products WHERE name = '${p.productName}' AND ((code IS NOT NULL AND code = '${p.productCode}') OR (code IS NULL AND color = '${p.productCode}'));`;
+        }
+        return sql;
+    });
+    fastify.get("/create-productsImagesMocked", async (request, reply) => {
+        let sql;
+        for (const p of data_1.images3) {
+            sql += "\nINSERT INTO productsImages (productId,productName,productCode,sequence,type,isMocked) ";
+            sql += `SELECT id AS productId, name AS productName, '${p.productCode}' AS productCode, ${p.sequence} AS sequence, '${p.type}' AS type, ${p.isMocked} AS isMocked FROM products WHERE name = '${p.productName}' AND ((code IS NOT NULL AND code = '${p.productCode}') OR (code IS NULL AND color = '${p.productCode}'));`;
         }
         return sql;
     });

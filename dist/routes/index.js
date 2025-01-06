@@ -16,5 +16,4 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
 Object.defineProperty(exports, "__esModule", { value: true });
 __exportStar(require("./api.routes"), exports);
 __exportStar(require("./data-creation.routes"), exports);
-__exportStar(require("./bo-api.routes"), exports);
 //# sourceMappingURL=index.js.map

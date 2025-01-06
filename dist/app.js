@@ -51,7 +51,6 @@ server.register(cors_1.default, {
 server.register(multipart_1.default);
 server.register(routes_1.routes);
 server.register(routes_1.dataCreationRoutes);
-server.register(routes_1.boFunctionsRoutes);
 server.listen({ host: '127.0.0.1', port: 8888 }, (err, address) => {
     if (err) {
         console.error(err);
