@@ -11,7 +11,7 @@ export const getFaqList = async (fastify: FastifyInstance) => {
         value = sections.map((x: any) => {
             return {
                 category: x.name,
-                children: questions.filter((y: any) => y.sectionId === x.Id).map((z: any) => {
+                children: questions.filter((y: any) => y.sectionId === x.id).map((z: any) => {
                     return {
                         title: z.question,
                         content: z.answer,

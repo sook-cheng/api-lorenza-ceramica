@@ -38,10 +38,10 @@ async function routes(fastify) {
         return (0, functions_1.getInspirationList)();
     });
     fastify.get("/projects-commercial", async (request, reply) => {
-        return (0, functions_1.getProjectCommercialList)();
+        return (0, functions_1.getProjectCommercialList)(fastify);
     });
     fastify.get("/projects-residential", async (request, reply) => {
-        return (0, functions_1.getProjectResidentialList)();
+        return (0, functions_1.getProjectResidentialList)(fastify);
     });
 }
 //# sourceMappingURL=api.routes.js.map

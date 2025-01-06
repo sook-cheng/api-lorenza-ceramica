@@ -47,10 +47,10 @@ export async function routes(fastify: FastifyInstance) {
   });
 
   fastify.get("/projects-commercial", async (request, reply) => {
-    return getProjectCommercialList();
+    return getProjectCommercialList(fastify);
   });
 
   fastify.get("/projects-residential", async (request, reply) => {
-    return getProjectResidentialList();
+    return getProjectResidentialList(fastify);
   });
 }

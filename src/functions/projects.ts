@@ -1,9 +1,29 @@
-import { inspirationData } from "../data/inspirations.data";
+import { FastifyInstance } from "fastify";
 
-export const getProjectCommercialList = () => {
-    return [inspirationData[1]];
+export const getProjectCommercialList = async (fastify: FastifyInstance) => {
+    const connection = await fastify['mysql'].getConnection();
+    let value: any = [];
+
+    try {
+        const [rows] = await connection.query(`SELECT * FROM projectCommercials;`);
+        value = rows;
+    }
+    finally {
+        connection.release();
+        return value;
+    }
 }
 
-export const getProjectResidentialList = () => {
-    return [inspirationData[2]];
+export const getProjectResidentialList = async (fastify: FastifyInstance) => {
+    const connection = await fastify['mysql'].getConnection();
+    let value: any = [];
+
+    try {
+        const [rows] = await connection.query(`SELECT * FROM projectResidentials;`);
+        value = rows;
+    }
+    finally {
+        connection.release();
+        return value;
+    }
 }
