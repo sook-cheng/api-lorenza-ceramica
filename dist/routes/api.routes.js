@@ -7,6 +7,9 @@ async function routes(fastify) {
     fastify.get("/about-us", async (request, reply) => {
         return (0, functions_1.getAboutUs)(fastify);
     });
+    fastify.get("/company-info", async (request, reply) => {
+        return (0, functions_1.getCompanyInfo)(fastify);
+    });
     fastify.get("/faq", async (request, reply) => {
         return (0, functions_1.getFaqList)(fastify);
     });
@@ -15,6 +18,9 @@ async function routes(fastify) {
     });
     fastify.get("/categories", async (request, reply) => {
         return (0, functions_1.getAllCategories)(fastify);
+    });
+    fastify.get("/home-banners", async (request, reply) => {
+        return (0, functions_1.getHomeBanners)(fastify);
     });
     fastify.get("/home-partners", async (request, reply) => {
         return (0, functions_1.getHomePartners)(fastify);

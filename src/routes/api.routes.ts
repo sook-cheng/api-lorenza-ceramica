@@ -1,10 +1,14 @@
 import { FastifyInstance } from "fastify";
-import { getAboutUs, getAllCategories, getAllProducts, getAllProductsSideNavs, getFaqList, getHomePartners, getInspirationList, getProductDetailsByCode, getProductsBySideNav, getProductsByTagName, getProjectCommercialList, getProjectResidentialList } from "../functions";
+import { getAboutUs, getAllCategories, getAllProducts, getAllProductsSideNavs, getCompanyInfo, getFaqList, getHomeBanners, getHomePartners, getInspirationList, getProductDetailsByCode, getProductsBySideNav, getProductsByTagName, getProjectCommercialList, getProjectResidentialList } from "../functions";
 
 export async function routes(fastify: FastifyInstance) {
   // Add new routes here
   fastify.get("/about-us", async (request, reply) => {
     return getAboutUs(fastify);
+  });
+
+  fastify.get("/company-info", async (request, reply) => {
+    return getCompanyInfo(fastify);
   });
 
   fastify.get("/faq", async (request, reply) => {
@@ -17,6 +21,10 @@ export async function routes(fastify: FastifyInstance) {
 
   fastify.get("/categories", async (request, reply) => {
     return getAllCategories(fastify);
+  });
+
+  fastify.get("/home-banners", async (request, reply) => {
+    return getHomeBanners(fastify);
   });
 
   fastify.get("/home-partners", async (request, reply) => {
