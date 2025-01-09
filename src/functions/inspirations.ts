@@ -5,7 +5,7 @@ export const getInspirationList = async (fastify: FastifyInstance) => {
     let value: any = [];
 
     try {
-        const [rows] = await connection.query(`SELECT * FROM inspirations;`);
+        const [rows] = await connection.query(`SELECT * FROM inspirations ORDER BY id DESC`);
         value = rows;
     }
     finally {

@@ -5,7 +5,7 @@ export const getProjectCommercialList = async (fastify: FastifyInstance) => {
     let value: any = [];
 
     try {
-        const [rows] = await connection.query(`SELECT * FROM projectCommercials;`);
+        const [rows] = await connection.query(`SELECT * FROM projectCommercials ORDER BY id DESC`);
         value = rows;
     }
     finally {
@@ -19,7 +19,7 @@ export const getProjectResidentialList = async (fastify: FastifyInstance) => {
     let value: any = [];
 
     try {
-        const [rows] = await connection.query(`SELECT * FROM projectResidentials;`);
+        const [rows] = await connection.query(`SELECT * FROM projectResidentials ORDER BY id DESC`);
         value = rows;
     }
     finally {

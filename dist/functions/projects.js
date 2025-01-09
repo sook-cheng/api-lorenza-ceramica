@@ -5,7 +5,7 @@ const getProjectCommercialList = async (fastify) => {
     const connection = await fastify['mysql'].getConnection();
     let value = [];
     try {
-        const [rows] = await connection.query(`SELECT * FROM projectCommercials;`);
+        const [rows] = await connection.query(`SELECT * FROM projectCommercials ORDER BY id DESC`);
         value = rows;
     }
     finally {
@@ -18,7 +18,7 @@ const getProjectResidentialList = async (fastify) => {
     const connection = await fastify['mysql'].getConnection();
     let value = [];
     try {
-        const [rows] = await connection.query(`SELECT * FROM projectResidentials;`);
+        const [rows] = await connection.query(`SELECT * FROM projectResidentials ORDER BY id DESC`);
         value = rows;
     }
     finally {
