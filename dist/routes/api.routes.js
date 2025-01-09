@@ -41,13 +41,25 @@ async function routes(fastify) {
         return (0, functions_1.getProductDetailsByCode)(fastify, name, code);
     });
     fastify.get("/inspirations", async (request, reply) => {
-        return (0, functions_1.getInspirationList)();
+        return (0, functions_1.getInspirationList)(fastify);
     });
     fastify.get("/projects-commercial", async (request, reply) => {
         return (0, functions_1.getProjectCommercialList)(fastify);
     });
     fastify.get("/projects-residential", async (request, reply) => {
         return (0, functions_1.getProjectResidentialList)(fastify);
+    });
+    fastify.get("/inspirations/:path", async (request, reply) => {
+        const { path } = request.params;
+        return (0, functions_1.getInspirationByPath)(fastify, path);
+    });
+    fastify.get("/projects-commercial/:path", async (request, reply) => {
+        const { path } = request.params;
+        return (0, functions_1.getProjectCommercialByPath)(fastify, path);
+    });
+    fastify.get("/projects-residential/:path", async (request, reply) => {
+        const { path } = request.params;
+        return (0, functions_1.getProjectResidentialByPath)(fastify, path);
     });
 }
 //# sourceMappingURL=api.routes.js.map

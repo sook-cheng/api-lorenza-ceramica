@@ -1,5 +1,5 @@
 import { FastifyInstance } from "fastify";
-import { getAboutUs, getAllCategories, getAllProducts, getAllProductsSideNavs, getCompanyInfo, getFaqList, getHomeBanners, getHomePartners, getInspirationList, getProductDetailsByCode, getProductsBySideNav, getProductsByTagName, getProjectCommercialList, getProjectResidentialList } from "../functions";
+import { getAboutUs, getAllCategories, getAllProducts, getAllProductsSideNavs, getCompanyInfo, getFaqList, getHomeBanners, getHomePartners, getInspirationByPath, getInspirationList, getProductDetailsByCode, getProductsBySideNav, getProductsByTagName, getProjectCommercialByPath, getProjectCommercialList, getProjectResidentialByPath, getProjectResidentialList } from "../functions";
 
 export async function routes(fastify: FastifyInstance) {
   // Add new routes here
@@ -51,7 +51,7 @@ export async function routes(fastify: FastifyInstance) {
   });
 
   fastify.get("/inspirations", async (request, reply) => {
-    return getInspirationList();
+    return getInspirationList(fastify);
   });
 
   fastify.get("/projects-commercial", async (request, reply) => {
@@ -60,5 +60,20 @@ export async function routes(fastify: FastifyInstance) {
 
   fastify.get("/projects-residential", async (request, reply) => {
     return getProjectResidentialList(fastify);
+  });
+
+  fastify.get("/inspirations/:path", async (request, reply) => {
+    const { path }: any = request.params;
+    return getInspirationByPath(fastify, path);
+  });
+
+  fastify.get("/projects-commercial/:path", async (request, reply) => {
+    const { path }: any = request.params;
+    return getProjectCommercialByPath(fastify, path);
+  });
+
+  fastify.get("/projects-residential/:path", async (request, reply) => {
+    const { path }: any = request.params;
+    return getProjectResidentialByPath(fastify, path);
   });
 }
