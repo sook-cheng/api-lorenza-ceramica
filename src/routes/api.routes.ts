@@ -1,5 +1,5 @@
 import { FastifyInstance } from "fastify";
-import { getAboutUs, getAllCategories, getAllProducts, getAllProductsSideNavs, getAllProductsSideNavsAlternative, getCompanyInfo, getFaqList, getHomeBanners, getHomePartners, getInspirationByPath, getInspirationList, getProductDetailsByCode, getProductsBySideNav, getProductsByTagName, getProjectCommercialByPath, getProjectCommercialList, getProjectResidentialByPath, getProjectResidentialList } from "../functions";
+import { getAboutUs, getAllCategories, getAllProducts, getAllProductsSideNavs, getAllProductsSideNavsAlternative, getCompanyInfo, getFaqList, getHomeBanners, getHomePartners, getInspirationByPath, getInspirationList, getProductDetailsByCode, getProductsByDbTable, getProductsBySideNav, getProductsByTagName, getProjectCommercialByPath, getProjectCommercialList, getProjectResidentialByPath, getProjectResidentialList } from "../functions";
 
 export async function routes(fastify: FastifyInstance) {
   // Add new routes here
@@ -38,6 +38,11 @@ export async function routes(fastify: FastifyInstance) {
   fastify.get("/products/:value", async (request, reply) => {
     const { value }: any = request.params;
     return getProductsBySideNav(fastify, value);
+  });
+
+  fastify.get("/products/:table/:value", async (request, reply) => {
+    const { table, value }: any = request.params;
+    return getProductsByDbTable(fastify, table, value);
   });
 
   fastify.get("/productsByTagName/:value", async (request, reply) => {

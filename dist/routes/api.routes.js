@@ -32,6 +32,10 @@ async function routes(fastify) {
         const { value } = request.params;
         return (0, functions_1.getProductsBySideNav)(fastify, value);
     });
+    fastify.get("/products/:table/:value", async (request, reply) => {
+        const { table, value } = request.params;
+        return (0, functions_1.getProductsByDbTable)(fastify, table, value);
+    });
     fastify.get("/productsByTagName/:value", async (request, reply) => {
         const { value } = request.params;
         return (0, functions_1.getProductsByTagName)(fastify, value);
