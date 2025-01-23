@@ -16,6 +16,10 @@ export async function routes(fastify: FastifyInstance) {
   });
 
   fastify.get("/productsSideNavs", async (request, reply) => {
+    return getAllProductsSideNavs(fastify);
+  });
+
+  fastify.get("/productsSideNavsAlternative", async (request, reply) => {
     return getAllProductsSideNavsAlternative(fastify);
   });
 

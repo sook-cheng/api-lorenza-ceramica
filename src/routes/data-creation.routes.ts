@@ -192,4 +192,33 @@ export async function dataCreationRoutes(fastify: FastifyInstance) {
     }
     return sql;
   });
+
+  fastify.post("/update-products-sequence", async (request, reply) => {
+    const connection = await fastify['mysql'].getConnection();
+    let res: { code: number, message: string } = { code: 200, message: "OK." };
+
+    try {
+      const [rows] = await connection.query('SELECT * FROM products ORDER BY name ASC');
+
+      for (let index = 0; index < rows.length; index++) {
+        await connection.execute('UPDATE products SET sequence=? WHERE id=?', [index + 1, rows[index].id]);
+      }
+
+      res = {
+        code: 204,
+        message: `Products updated.`
+      }
+    }
+    catch (err) {
+        console.error(err);
+        res = {
+            code: 500,
+            message: "Internal Server Error."
+        };
+    }
+    finally {
+        connection.release();
+        reply.code(res?.code!).send({ message: res?.message });
+    }
+});
 }
