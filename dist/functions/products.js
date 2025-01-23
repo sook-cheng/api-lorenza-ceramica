@@ -5,9 +5,9 @@ const getAllProducts = async (fastify) => {
     const connection = await fastify['mysql'].getConnection();
     let value = [];
     try {
-        const [rows, fields] = await connection.query('SELECT * FROM products ORDER BY id;');
-        const [images, iFields] = await connection.query('SELECT * FROM productsImages WHERE isMocked = 0 ORDER BY productId;');
-        const [mockedImages, miFields] = await connection.query('SELECT * FROM productsImages WHERE isMocked = 1 ORDER BY productId;');
+        const [rows, fields] = await connection.query('SELECT * FROM products ORDER BY sequence;');
+        const [images, iFields] = await connection.query('SELECT * FROM productsImages WHERE isMocked = 0 ORDER BY productId, sequence;');
+        const [mockedImages, miFields] = await connection.query('SELECT * FROM productsImages WHERE isMocked = 1 ORDER BY productId, sequence;');
         if (rows.length > 0) {
             value = rows.map((x) => {
                 const imgs = images.filter((y) => y.productId === x.id);
@@ -24,6 +24,7 @@ const getAllProducts = async (fastify) => {
                     prdColor: x.color ?? '-',
                     prdFinish: x.finish ?? '-',
                     thickness: x.thickness ?? '-',
+                    sequence: x.sequence ?? '-',
                     images: imgList,
                     mockedImages: mockedImgList,
                 };
@@ -47,28 +48,28 @@ const getProductsBySideNav = async (fastify, param) => {
         switch (dbTable) {
             case 'tags':
                 if (param === 'sales') {
-                    query = `SELECT DISTINCT p.* FROM products p LEFT JOIN productsTags pt ON p.id = pt.productId LEFT JOIN tags t1 ON t1.id = pt.tagId LEFT JOIN tags t2 ON t1.mainTagId = t2.id WHERE t2.value = \'${sideNavName}\' ORDER BY p.id, p.name ASC;`;
+                    query = `SELECT DISTINCT p.* FROM products p LEFT JOIN productsTags pt ON p.id = pt.productId LEFT JOIN tags t1 ON t1.id = pt.tagId LEFT JOIN tags t2 ON t1.mainTagId = t2.id WHERE t2.value = \'${sideNavName}\' ORDER BY p.sequence;`;
                 }
                 else
-                    query = `SELECT DISTINCT p.* FROM products p LEFT JOIN productsTags pt ON p.id = pt.productId LEFT JOIN tags t1 ON t1.id = pt.tagId WHERE t1.value = \'${sideNavName}\' ORDER BY p.id, p.name ASC;`;
+                    query = `SELECT DISTINCT p.* FROM products p LEFT JOIN productsTags pt ON p.id = pt.productId LEFT JOIN tags t1 ON t1.id = pt.tagId WHERE t1.value = \'${sideNavName}\' ORDER BY p.sequence;`;
                 break;
             case 'sizes':
-                query = `SELECT DISTINCT p.* FROM products p LEFT JOIN productsSizes ps ON p.id = ps.productId LEFT JOIN sizes s ON s.id = ps.sizeId WHERE s.value = \'${sideNavName}\' ORDER BY p.id, p.name ASC;`;
+                query = `SELECT DISTINCT p.* FROM products p LEFT JOIN productsSizes ps ON p.id = ps.productId LEFT JOIN sizes s ON s.id = ps.sizeId WHERE s.value = \'${sideNavName}\' ORDER BY p.sequence;`;
                 break;
             case 'finishes':
-                query = `SELECT DISTINCT p.* FROM products p LEFT JOIN productsFinishes pf ON p.id = pf.productId LEFT JOIN finishes f ON f.id = pf.finishId WHERE f.value = \'${sideNavName}\' ORDER BY p.id, p.name ASC;`;
+                query = `SELECT DISTINCT p.* FROM products p LEFT JOIN productsFinishes pf ON p.id = pf.productId LEFT JOIN finishes f ON f.id = pf.finishId WHERE f.value = \'${sideNavName}\' ORDER BY p.sequence;`;
                 break;
             case 'colors':
-                query = `SELECT DISTINCT p.* FROM products p LEFT JOIN productsColors pc ON p.id = pc.productId LEFT JOIN colors c ON c.id = pc.colorId WHERE c.value = \'${sideNavName}\' ORDER BY p.id, p.name ASC;`;
+                query = `SELECT DISTINCT p.* FROM products p LEFT JOIN productsColors pc ON p.id = pc.productId LEFT JOIN colors c ON c.id = pc.colorId WHERE c.value = \'${sideNavName}\' ORDER BY p.sequence;`;
                 break;
             case 'categories':
             default:
-                query = `SELECT DISTINCT p.* FROM products p LEFT JOIN productsCategories pc ON p.id = pc.productId LEFT JOIN categories c1 ON c1.id = pc.categoryId WHERE c1.name = \'${sideNavName}\' ORDER BY p.id, p.name ASC;`;
+                query = `SELECT DISTINCT p.* FROM products p LEFT JOIN productsCategories pc ON p.id = pc.productId LEFT JOIN categories c1 ON c1.id = pc.categoryId WHERE c1.name = \'${sideNavName}\' ORDER BY p.sequence;`;
                 break;
         }
         // All products of Tiles
         if (param === 'all-products') {
-            query = `SELECT DISTINCT p.* FROM products p LEFT JOIN productsCategories pc ON p.id = pc.productId LEFT JOIN categories c1 ON c1.id = pc.categoryId LEFT JOIN categories c2 ON c2.id = c1.mainCategoryId WHERE c2.name = \'Tiles\' ORDER BY p.id, p.name ASC;`;
+            query = `SELECT DISTINCT p.* FROM products p LEFT JOIN productsCategories pc ON p.id = pc.productId LEFT JOIN categories c1 ON c1.id = pc.categoryId LEFT JOIN categories c2 ON c2.id = c1.mainCategoryId WHERE c2.name = \'Tiles\' ORDER BY p.sequence;`;
         }
         const [rows, fields] = await connection.query(query);
         if (rows.length > 0) {
@@ -95,6 +96,7 @@ const getProductsBySideNav = async (fastify, param) => {
                     prdColor: x.color ?? '-',
                     prdFinish: x.finish ?? '-',
                     thickness: x.thickness ?? '-',
+                    sequence: x.sequence ?? '-',
                     images: imgList,
                     mockedImages: mockedImgList,
                 };
@@ -115,28 +117,28 @@ const getProductsByDbTable = async (fastify, dbTable, param) => {
         switch (dbTable) {
             case 'tags':
                 if (param === 'Sales') {
-                    query = `SELECT DISTINCT p.* FROM products p LEFT JOIN productsTags pt ON p.id = pt.productId LEFT JOIN tags t1 ON t1.id = pt.tagId LEFT JOIN tags t2 ON t1.mainTagId = t2.id WHERE t2.value = \'${param}\' ORDER BY p.id, p.name ASC;`;
+                    query = `SELECT DISTINCT p.* FROM products p LEFT JOIN productsTags pt ON p.id = pt.productId LEFT JOIN tags t1 ON t1.id = pt.tagId LEFT JOIN tags t2 ON t1.mainTagId = t2.id WHERE t2.value = \'${param}\' ORDER BY p.sequence;`;
                 }
                 else
-                    query = `SELECT DISTINCT p.* FROM products p LEFT JOIN productsTags pt ON p.id = pt.productId LEFT JOIN tags t1 ON t1.id = pt.tagId WHERE t1.value = \'${param}\' ORDER BY p.id, p.name ASC;`;
+                    query = `SELECT DISTINCT p.* FROM products p LEFT JOIN productsTags pt ON p.id = pt.productId LEFT JOIN tags t1 ON t1.id = pt.tagId WHERE t1.value = \'${param}\' ORDER BY p.sequence;`;
                 break;
             case 'sizes':
-                query = `SELECT DISTINCT p.* FROM products p LEFT JOIN productsSizes ps ON p.id = ps.productId LEFT JOIN sizes s ON s.id = ps.sizeId WHERE s.value = \'${param}\' ORDER BY p.id, p.name ASC;`;
+                query = `SELECT DISTINCT p.* FROM products p LEFT JOIN productsSizes ps ON p.id = ps.productId LEFT JOIN sizes s ON s.id = ps.sizeId WHERE s.value = \'${param}\' ORDER BY p.sequence;`;
                 break;
             case 'finishes':
-                query = `SELECT DISTINCT p.* FROM products p LEFT JOIN productsFinishes pf ON p.id = pf.productId LEFT JOIN finishes f ON f.id = pf.finishId WHERE f.value = \'${param}\' ORDER BY p.id, p.name ASC;`;
+                query = `SELECT DISTINCT p.* FROM products p LEFT JOIN productsFinishes pf ON p.id = pf.productId LEFT JOIN finishes f ON f.id = pf.finishId WHERE f.value = \'${param}\' ORDER BY p.sequence;`;
                 break;
             case 'colors':
-                query = `SELECT DISTINCT p.* FROM products p LEFT JOIN productsColors pc ON p.id = pc.productId LEFT JOIN colors c ON c.id = pc.colorId WHERE c.value = \'${param}\' ORDER BY p.id, p.name ASC;`;
+                query = `SELECT DISTINCT p.* FROM products p LEFT JOIN productsColors pc ON p.id = pc.productId LEFT JOIN colors c ON c.id = pc.colorId WHERE c.value = \'${param}\' ORDER BY p.sequence;`;
                 break;
             case 'categories':
             default:
-                query = `SELECT DISTINCT p.* FROM products p LEFT JOIN productsCategories pc ON p.id = pc.productId LEFT JOIN categories c1 ON c1.id = pc.categoryId WHERE c1.value = \'${param}\' ORDER BY p.id, p.name ASC;`;
+                query = `SELECT DISTINCT p.* FROM products p LEFT JOIN productsCategories pc ON p.id = pc.productId LEFT JOIN categories c1 ON c1.id = pc.categoryId WHERE c1.value = \'${param}\' ORDER BY p.sequence;`;
                 break;
         }
         // All products of Tiles
         if (param === 'All Products') {
-            query = `SELECT DISTINCT p.* FROM products p LEFT JOIN productsCategories pc ON p.id = pc.productId LEFT JOIN categories c1 ON c1.id = pc.categoryId LEFT JOIN categories c2 ON c2.id = c1.mainCategoryId WHERE c2.name = \'Tiles\' ORDER BY p.id, p.name ASC;`;
+            query = `SELECT DISTINCT p.* FROM products p LEFT JOIN productsCategories pc ON p.id = pc.productId LEFT JOIN categories c1 ON c1.id = pc.categoryId LEFT JOIN categories c2 ON c2.id = c1.mainCategoryId WHERE c2.name = \'Tiles\' ORDER BY p.sequence;`;
         }
         const [rows, fields] = await connection.query(query);
         if (rows.length > 0) {
@@ -163,6 +165,7 @@ const getProductsByDbTable = async (fastify, dbTable, param) => {
                     prdColor: x.color ?? '-',
                     prdFinish: x.finish ?? '-',
                     thickness: x.thickness ?? '-',
+                    sequence: x.sequence ?? '-',
                     images: imgList,
                     mockedImages: mockedImgList,
                 };
@@ -179,7 +182,7 @@ const getProductsByTagName = async (fastify, param) => {
     const connection = await fastify['mysql'].getConnection();
     let value = [];
     try {
-        const query = `SELECT p.* FROM products p LEFT JOIN productsTags pt ON p.id = pt.productId LEFT JOIN tags t1 ON t1.id = pt.tagId WHERE t1.value = \'${param}\' ORDER BY p.id, p.name ASC;`;
+        const query = `SELECT p.* FROM products p LEFT JOIN productsTags pt ON p.id = pt.productId LEFT JOIN tags t1 ON t1.id = pt.tagId WHERE t1.value = \'${param}\' ORDER BY p.sequence;`;
         const [rows, fields] = await connection.query(query);
         if (rows.length > 0) {
             const productIds = rows.map((x) => x.id);
@@ -205,6 +208,7 @@ const getProductsByTagName = async (fastify, param) => {
                     prdColor: x.color ?? '-',
                     prdFinish: x.finish ?? '-',
                     thickness: x.thickness ?? '-',
+                    sequence: x.sequence ?? '-',
                     images: imgList,
                     mockedImages: mockedImgList
                 };

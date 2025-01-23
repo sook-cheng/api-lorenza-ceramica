@@ -14,6 +14,9 @@ async function routes(fastify) {
         return (0, functions_1.getFaqList)(fastify);
     });
     fastify.get("/productsSideNavs", async (request, reply) => {
+        return (0, functions_1.getAllProductsSideNavs)(fastify);
+    });
+    fastify.get("/productsSideNavsAlternative", async (request, reply) => {
         return (0, functions_1.getAllProductsSideNavsAlternative)(fastify);
     });
     fastify.get("/categories", async (request, reply) => {
