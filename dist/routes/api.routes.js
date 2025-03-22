@@ -68,5 +68,12 @@ async function routes(fastify) {
         const { path } = request.params;
         return (0, functions_1.getProjectResidentialByPath)(fastify, path);
     });
+    fastify.get("/instagram-token", async (request, reply) => {
+        return (0, functions_1.getInstagramToken)(fastify);
+    });
+    fastify.post("/update-instagram-token", async (request, reply) => {
+        const result = await (0, functions_1.updateInstagramToken)(fastify, request.body);
+        reply.code(result?.code).send({ message: result?.message });
+    });
 }
 //# sourceMappingURL=api.routes.js.map
