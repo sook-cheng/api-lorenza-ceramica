@@ -23,6 +23,7 @@ const getHomeBanners = async (fastify) => {
             return {
                 id: x.id,
                 imageUrl: x.imageUrl,
+                mobileImageUrl: x.mobileImageUrl,
                 alt: x.name,
                 title: x.name,
                 link: x.link
