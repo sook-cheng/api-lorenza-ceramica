@@ -18,7 +18,7 @@ const getHomeBanners = async (fastify) => {
     const connection = await fastify['mysql'].getConnection();
     let value = [];
     try {
-        const [rows] = await connection.query(`SELECT id, name, imageUrl, link FROM homeBanners ORDER BY sequence;`);
+        const [rows] = await connection.query(`SELECT * FROM homeBanners ORDER BY sequence;`);
         value = rows.map((x) => {
             return {
                 id: x.id,
