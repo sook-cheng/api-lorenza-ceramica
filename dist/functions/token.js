@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.updateInstagramToken = exports.getInstagramToken = void 0;
+exports.updateToken = exports.getToken = void 0;
 /**
  *
  * @param fastify
@@ -9,38 +9,39 @@ exports.updateInstagramToken = exports.getInstagramToken = void 0;
  *  value: string,
  * }
 */
-const getInstagramToken = async (fastify) => {
+const getToken = async (fastify) => {
     const connection = await fastify['mysql'].getConnection();
     let value = [];
     try {
-        const [rows] = await connection.query('SELECT name, value FROM tokens WHERE name=?', ['INSTAGRAM_TOKEN']);
-        value = rows[0];
+        const [rows] = await connection.query('SELECT name, value FROM tokens');
+        value = rows;
     }
     finally {
         connection.release();
         return value;
     }
 };
-exports.getInstagramToken = getInstagramToken;
+exports.getToken = getToken;
 /**
  *
  * @param fastify
  * @param data {
  *  value: string
+ *  name: string
  * }
  * @returns {
  *  code: number,
  *  message: string,
  * }
 */
-const updateInstagramToken = async (fastify, data) => {
+const updateToken = async (fastify, data) => {
     const connection = await fastify['mysql'].getConnection();
     let res = { code: 200, message: "OK." };
     try {
-        const [result] = await connection.execute('UPDATE tokens SET value=? WHERE name=?', [data.value, 'INSTAGRAM_TOKEN']);
+        const [result] = await connection.execute('UPDATE tokens SET value=? WHERE name=?', [data.value, data.name]);
         res = result?.affectedRows > 0 ? {
             code: 204,
-            message: `Instagram token updated.`
+            message: `${data.name} updated.`
         } : {
             code: 500,
             message: "Internal Server Error."
@@ -58,5 +59,5 @@ const updateInstagramToken = async (fastify, data) => {
         return res;
     }
 };
-exports.updateInstagramToken = updateInstagramToken;
+exports.updateToken = updateToken;
 //# sourceMappingURL=token.js.map

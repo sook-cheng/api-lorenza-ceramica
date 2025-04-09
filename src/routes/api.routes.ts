@@ -1,5 +1,5 @@
 import { FastifyInstance } from "fastify";
-import { getAboutUs, getAllCategories, getAllProducts, getAllProductsSideNavs, getAllProductsSideNavsAlternative, getCompanyInfo, getFaqList, getHomeBanners, getHomePartners, getInspirationByPath, getInspirationList, getInstagramToken, getProductDetailsByCode, getProductsByDbTable, getProductsBySideNav, getProductsByTagName, getProjectCommercialByPath, getProjectCommercialList, getProjectResidentialByPath, getProjectResidentialList, updateInstagramToken } from "../functions";
+import { getAboutUs, getAllCategories, getAllProducts, getAllProductsSideNavs, getAllProductsSideNavsAlternative, getCompanyInfo, getFaqList, getHomeBanners, getHomePartners, getInspirationByPath, getInspirationList, getToken, getProductDetailsByCode, getProductsByDbTable, getProductsBySideNav, getProductsByTagName, getProjectCommercialByPath, getProjectCommercialList, getProjectResidentialByPath, getProjectResidentialList, updateToken } from "../functions";
 
 export async function routes(fastify: FastifyInstance) {
   // Add new routes here
@@ -86,12 +86,12 @@ export async function routes(fastify: FastifyInstance) {
     return getProjectResidentialByPath(fastify, path);
   });
 
-  fastify.get("/instagram-token", async (request, reply) => {
-    return getInstagramToken(fastify);
+  fastify.get("/get-tokens", async (request, reply) => {
+    return getToken(fastify);
   });
 
-  fastify.post("/update-instagram-token", async (request, reply) => {
-    const result = await updateInstagramToken(fastify, request.body);
+  fastify.post("/update-token", async (request, reply) => {
+    const result = await updateToken(fastify, request.body);
     reply.code(result?.code!).send({ message: result?.message });
-});
+  });
 }

@@ -8,13 +8,13 @@ import { FastifyInstance } from "fastify";
  *  value: string,
  * }
 */
-export const getInstagramToken = async (fastify: FastifyInstance) => {
+export const getToken = async (fastify: FastifyInstance) => {
     const connection = await fastify['mysql'].getConnection();
     let value: any = [];
 
     try {
-        const [rows] = await connection.query('SELECT name, value FROM tokens WHERE name=?', ['INSTAGRAM_TOKEN']);
-        value = rows[0];
+        const [rows] = await connection.query('SELECT name, value FROM tokens');
+        value = rows;
     }
     finally {
         connection.release();
@@ -27,23 +27,24 @@ export const getInstagramToken = async (fastify: FastifyInstance) => {
  * @param fastify 
  * @param data { 
  *  value: string
+ *  name: string
  * }
  * @returns {
  *  code: number,
  *  message: string,
  * }
 */
-export const updateInstagramToken = async (fastify: FastifyInstance, data: any) => {
+export const updateToken = async (fastify: FastifyInstance, data: any) => {
     const connection = await fastify['mysql'].getConnection();
     let res: { code: number, message: string } = { code: 200, message: "OK." };
 
     try {
         const [result] = await connection.execute('UPDATE tokens SET value=? WHERE name=?',
-            [data.value, 'INSTAGRAM_TOKEN']);
+            [data.value, data.name]);
 
         res = result?.affectedRows > 0 ? {
             code: 204,
-            message: `Instagram token updated.`
+            message: `${data.name} updated.`
         } : {
             code: 500,
             message: "Internal Server Error."
