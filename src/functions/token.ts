@@ -6,6 +6,7 @@ import { FastifyInstance } from "fastify";
  * @returns {
  *  name: number,
  *  value: string,
+ *  updatedAt: timestamp
  * }
 */
 export const getToken = async (fastify: FastifyInstance) => {
@@ -13,7 +14,7 @@ export const getToken = async (fastify: FastifyInstance) => {
     let value: any = [];
 
     try {
-        const [rows] = await connection.query('SELECT name, value FROM tokens');
+        const [rows] = await connection.query('SELECT name, value, updatedAt FROM tokens');
         value = rows;
     }
     finally {

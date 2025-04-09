@@ -7,13 +7,14 @@ exports.updateToken = exports.getToken = void 0;
  * @returns {
  *  name: number,
  *  value: string,
+ *  updatedAt: timestamp
  * }
 */
 const getToken = async (fastify) => {
     const connection = await fastify['mysql'].getConnection();
     let value = [];
     try {
-        const [rows] = await connection.query('SELECT name, value FROM tokens');
+        const [rows] = await connection.query('SELECT name, value, updatedAt FROM tokens');
         value = rows;
     }
     finally {
